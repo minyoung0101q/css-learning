@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
+    <title>Home - My first website</title>
+    <meta charset="UTF-8" />
     <link
       rel="shortcut icon"
       sizes="16x16 32x32 64x64"
       href="https://nomadcoders.co/m.png"
     />
-    <title>Home - My first website</title>
+    <link href="/style.css" rel="stylesheet" />
+    <style>
+      h1 {
+        color: yellowgreen;
+        font-style: italic;
+        font-weight: 800;
+        text-decoration: underline;
+        font-size: 20px;
+      }
+      address {
+        color: brown;
+        font-weight: 1000px;
+        text-align: center;
+        color: tomato;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -20,9 +37,13 @@
     <footer>&copy; 2020 N.C</footer>
   </body>
 </html>
-<!--속성 값은 무조건 큰 따옴표로 작성하기-->
-<!--어떤 태그든 id 속성을 가질 수 있음-->
-<!--src는 img 태그만 가질 수 있는 속성-->
-<!--코드만으로 의미를 가진 시맨틱 태그들을 잊지 말기
-header, footer, navigation, main, article, section, aside
+<!--
+  CSS는 HTML을 가리키는 것을 의미하는데, 이것 자체를 Selector이라고 부른다.
+  css 속성 이름은 띄어쓰기를 하지 않음
+  CSS에는 크기를 나타내는 단위들이 많음 -> px(pixels), em, point, percentage(%) 등등, 그 중 px로 연습
+  CSS도 html 처럼 error가 나지 않지만, 브라우저가 이해하지 못함
+-->
+
+<!--기억하기
+css 속성 이름에 띄어쓰기 있으면 안되고, css 속성 코드 뒤에는 항상 세미콜론
 -->
