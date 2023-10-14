@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="https://nomadcoders.co/m.png"
+    />
     <title>Home - My first website</title>
   </head>
   <body>
     <form>
-      <input type="file" accept=".pdf" />
-      <!--이미지 파일이라면 뭐든 괜찮다.-->
-      <input type="file" accept="image/*" />
-      <input type="file" accept=".png, .pdf" />
-      <input required placeholder="Name" type="text" />
+      <label for="profile">Profile Photo</label>
+      <input id="profile" type="file" accept=".pdf, .png" />
+
+      <label for="first-name">First Name</label>
+      <input id="first-name" required placeholder="Name" type="text" />
+
       <input required placeholder="Last Name" type="text" />
       <input required placeholder="Username" type="text" />
       <input required placeholder="Password" minlength="10" type="password" />
@@ -17,18 +23,15 @@
     </form>
   </body>
 </html>
-<!--제출 버튼을 누르면 사이트가 새로고침됨
-  코코아 클론 강의에서는 form을 가지고 뭔가 하지 않음
-  form 태그와 attribute를 배우기에는 좋은 경험이기에 재밌을 것임
+<!--
+  form tag를 더 괜찮게 만들어줄 label 태그 사용하기
+  label 태그는 form에 질문을 추가할 수 있음
 -->
 <!--
-  required를 추가해서 form을 validation(검증) 할 수 있다.
+  label은 input과 함께여야 작동된다.
+  label은 for
+  input은 id
 -->
 <!--
-  minlength : "10" => 길이가 최소한 10자 이상이어야 한다.
--->
-<!--
-  대부분의 태그를 기억하지 못한다 해도 걱정 말기
-  mdn으로 검색해서 찾으면 됨
-  태그 이름, 속성 에 대해 이해하면 됨
+  first-name => 이렇게 공백없이 - 하이픈을 줘서 입력하기
 -->
