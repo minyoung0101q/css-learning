@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
-    <link
-      rel="shortcut icon"
-      href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
-    />
     <title>Home - My first website</title>
-    <meta name="description" content="This is my website" />
-    <meta charset="utf-8" />
   </head>
   <body>
-    <h1>Hello!</h1>
-    <a href="http://google.com" target="_blank">Go to Google</a>
-    <img src="img/logo.png" />
-    <p>lalalallalal</p>
-    <pre>hello! a, a</pre>
-    <p>
-      Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.
-    </p>
-    <cite>Hello</cite>
-    <code>funny</code>
-    <mark>highlight</mark>
-    <p>I like to live in <mark>South Korea</mark></p>
-    <p>I like to live in <strong>South Korea</strong></p>
-    <p>I like to live in <b>South Korea</b></p>
-    <p>I like to live in <sup>South Korea</sup></p>
-    <!--sup 태그는 2의 5제곱 같이 표현해줄 때 유용하다.-->
-    <p>2<sup>5</sup></p>
+    <form>
+      <input type="file" accept=".pdf" />
+      <!--이미지 파일이라면 뭐든 괜찮다.-->
+      <input type="file" accept="image/*" />
+      <input type="file" accept=".png, .pdf" />
+      <input required placeholder="Name" type="text" />
+      <input required placeholder="Last Name" type="text" />
+      <input required placeholder="Username" type="text" />
+      <input required placeholder="Password" minlength="10" type="password" />
+      <input type="submit" value="create account" />
+    </form>
   </body>
 </html>
-<!--p 태그 : 길이가 긴 태그에 사용함, 블록 태그임-->
-<!--Ctrl + D or Alt + D-->
+<!--제출 버튼을 누르면 사이트가 새로고침됨
+  코코아 클론 강의에서는 form을 가지고 뭔가 하지 않음
+  form 태그와 attribute를 배우기에는 좋은 경험이기에 재밌을 것임
+-->
+<!--
+  required를 추가해서 form을 validation(검증) 할 수 있다.
+-->
+<!--
+  minlength : "10" => 길이가 최소한 10자 이상이어야 한다.
+-->
+<!--
+  대부분의 태그를 기억하지 못한다 해도 걱정 말기
+  mdn으로 검색해서 찾으면 됨
+  태그 이름, 속성 에 대해 이해하면 됨
+-->
