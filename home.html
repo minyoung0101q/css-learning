@@ -9,58 +9,70 @@
       href="https://nomadcoders.co/m.png"
     />
     <style>
-      h1 {
-        color: yellowgreen;
-        font-style: italic;
-        font-weight: 800;
-        text-decoration: underline;
-        font-size: 20px;
+      div {
+        height: 150px;
+        width: 150px;
+        background-color: tomato;
       }
-      address {
-        color: brown;
-        font-weight: 1000px;
-        text-align: center;
-        color: tomato;
+      span {
+        background-color: turquoise;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>The Nico Times</h1>
-    </header>
-    <main>
-      <p>paragraph, 문단, long text</p>
-      <span>short text</span>
-      <address>123 Road Altavista</address>
-    </main>
-    <footer>&copy; 2020 N.C</footer>
+    <div></div>
+    <div></div>
+    <div></div>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <img src="img/logo.png" />
+    <span>hello</span>
+    <p>
+      this is paragraph. this is paragraph. this is paragraph. this is
+      paragraph. this is paragraph. this is paragraph. this is paragraph.
+    </p>
+    <a href="#">link</a>
+    <!-- # : 빈 링크를 의미 -->
   </body>
 </html>
+
+<!--semantic tags
+  header, nav, main, article, section, aside, footer
+  이러한 시맨틱 태그들은 주로 블록 레벨 요소로, 
+  수직으로 공간을 차지합니다. 
+  따라서, 이러한 태그를 사용하면 웹 페이지의 레이아웃을 수직으로 구성하고 페이지의 각 부분을 분명하게 정의할 수 있습니다. 이로써 웹 페이지의 구조와 내용을 이해하기 쉽고 검색 엔진 최적화 및 접근성 향상에 도움이 됩니다.
+-->
 <!--
-  CSS Cascading Style Sheet의 의미: 브라우저가 CSS 코드를 읽을 때 위에 있는 코드부터 차례대로 읽음
-  브라우저가 CSS를 읽는 방법을 아는 것이 좋음
-
-  <head> 태그 안의 <style> 태그로 css 작성하는 것을 인라인 css라 하고, css 파일을 include 하는 것을 external CSS라고 함
-  만약 이 두 CSS 코드가 같은 대상을 가리키게 된다면? 
-  가장 마지막으로 변경된 색깔로 지정됨
-  코드의 순서가 결과에 영향을 미침
-  즉, 내부 스타일 시트가 외부 스타일 시트보다 뒤에 있다면 서로 겹쳤을 때 내부 스타일 시트로 스타일 지정됨
-  외부 스타일 시트가 내부 스타일 뒤에 있다면 외부 스타일 시트가 마지막에 변경되니까 겹치는 게 있다면 외부 스타일로 지정됨
+  p 태그는 블록 요소
+  a, img 태그는 인라인 요소
 -->
-
-<!-- 
-  CSS 스타일 적용 순위
-  브라우저는 css를 위에서부터 아래로 읽는다.
-  결국 적용 되는 건 가장 마지막 코드다.
+<!--
+  box와 span
+  box는 옆에 아무것도 올 수 없음
+  span은 옆에 올 수 있음
 -->
 
 <!--
-  css 셀렉터를 
-  h1 {
-
-  }
-  h1 {
-
-  }
-  이렇게 두 개 써도 되지만 굳이?
+  옆에 다른 요소가 올 수 없는 것을 block
+  옆에 다른 요소가 올 수 있는 것을 inline 이라 함
+  inline: 옆에 다른 요소가 올 수 있음
+  이런 형태를 이해해야 디자인 하는데 도움이 될 것임
 -->
+
+<!--
+  inline 요소 간단 정리
+  a, img, span, code
+  작은 글, 링크, 그림 등
+-->
+<!--inline 요소는 많이 없다.-->
+<!--
+  block 요소
+  address, div, p, blockquote 등등
+-->
+
+<!--block이 아닌 종류를 기억하는 게 훨씬 좋음
+inline 요소 : span, a, img, code 등
+-->
+
+<!--다음 커밋은 block에 대한 얘기가 될 것임-->
