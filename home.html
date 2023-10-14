@@ -10,69 +10,55 @@
     />
     <style>
       div {
+        display: inline;
         height: 150px;
         width: 150px;
         background-color: tomato;
       }
       span {
+        height: 150px;
+        width: 150px;
+        display: block;
         background-color: turquoise;
       }
     </style>
   </head>
   <body>
     <div></div>
-    <div></div>
-    <div></div>
     <span>hello</span>
     <span>hello</span>
-    <span>hello</span>
-    <img src="img/logo.png" />
-    <span>hello</span>
-    <p>
-      this is paragraph. this is paragraph. this is paragraph. this is
-      paragraph. this is paragraph. this is paragraph. this is paragraph.
-    </p>
-    <a href="#">link</a>
-    <!-- # : 빈 링크를 의미 -->
   </body>
 </html>
 
-<!--semantic tags
-  header, nav, main, article, section, aside, footer
-  이러한 시맨틱 태그들은 주로 블록 레벨 요소로, 
-  수직으로 공간을 차지합니다. 
-  따라서, 이러한 태그를 사용하면 웹 페이지의 레이아웃을 수직으로 구성하고 페이지의 각 부분을 분명하게 정의할 수 있습니다. 이로써 웹 페이지의 구조와 내용을 이해하기 쉽고 검색 엔진 최적화 및 접근성 향상에 도움이 됩니다.
--->
 <!--
-  p 태그는 블록 요소
-  a, img 태그는 인라인 요소
--->
-<!--
-  box와 span
-  box는 옆에 아무것도 올 수 없음
-  span은 옆에 올 수 있음
+  box와 block에 대해 얘기하기 전에 block만 가지고 있는 특징에 대해 얘기해봄
+  block은 inline에는 없는 특징이 있음
+
+  ***block을 inline으로 block을 inline으로 바꾸는 것은 가능할까?
+  결론적으로 가능함***
+
+  span을 block으로 바꿔봄
+  기본적으로 span의 display 속성은 inline이다.
+  아무것도 적용하지 않으면 그 default 값이 display가 inline
+  브라우저는 기본적으로 span을 inline이라 인식한다.
+  span {
+        display: inline;
+        background-color: turquoise;
+      }
+  아래와 같이 코드를 작성하면 block이 된다.
+  span {
+    diplay: block;
+  }
+
+  inline 요소는 content, 즉 태그 사이에 text가 없으면 화면에 나오지 않음
+  그 이유는 다음과 같다.
+  어떤 요소가 inline이면 그 요소는 높이와 너비를 가질 수 없다.
+  inline은 높이와 너비가 없다. 그래서 div가 사라진 것이다.
+  inline 요소 안에 글자를 넣으면 글자의 크기만큼 공간을 차지해서 스타일링 된다(ex: backgroud-color: yellow)
 -->
 
 <!--
-  옆에 다른 요소가 올 수 없는 것을 block
-  옆에 다른 요소가 올 수 있는 것을 inline 이라 함
-  inline: 옆에 다른 요소가 올 수 있음
-  이런 형태를 이해해야 디자인 하는데 도움이 될 것임
+  기억하기!!
+  inline은 높이와 너비가 없고
+  block은 높이와 너비가 있다.
 -->
-
-<!--
-  inline 요소 간단 정리
-  a, img, span, code
-  작은 글, 링크, 그림 등
--->
-<!--inline 요소는 많이 없다.-->
-<!--
-  block 요소
-  address, div, p, blockquote 등등
--->
-
-<!--block이 아닌 종류를 기억하는 게 훨씬 좋음
-inline 요소 : span, a, img, code 등
--->
-
-<!--다음 커밋은 block에 대한 얘기가 될 것임-->
