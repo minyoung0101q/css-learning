@@ -9,29 +9,29 @@
     <title>Home - My first website</title>
   </head>
   <body>
-    <form>
-      <label for="profile">Profile Photo</label>
-      <input id="profile" type="file" accept=".pdf, .png" />
-
-      <label for="first-name">First Name</label>
-      <input id="first-name" required placeholder="Name" type="text" />
-
-      <input required placeholder="Last Name" type="text" />
-      <input required placeholder="Username" type="text" />
-      <input required placeholder="Password" minlength="10" type="password" />
+    <form id="website">
+      <label for="website">Website</label>
+      <input id="website" required placeholder="Name" type="date" />
       <input type="submit" value="create account" />
     </form>
   </body>
 </html>
 <!--
-  form tag를 더 괜찮게 만들어줄 label 태그 사용하기
-  label 태그는 form에 질문을 추가할 수 있음
--->
-<!--
-  label은 input과 함께여야 작동된다.
-  label은 for
-  input은 id
--->
-<!--
-  first-name => 이렇게 공백없이 - 하이픈을 줘서 입력하기
--->
+  id에 대해서
+  id는 unique identifier이다.
+  element당, 태그 하나당 하나의 id만 가질 수 있는 게 규칙이다.
+  id값은 unique 해야 한다.
+
+  예를 들어서 아래와 같이 하면 안된다.
+  <form id="website">
+      <label for="website">Website</label>
+      <input id="website" required placeholder="Name" type="date" />
+      <input type="submit" value="create account" />
+    </form>
+  <input id="website" required placeholder="Name" type="date" />
+  위 코드를 보면 id 값은 unique 하지 않다.
+
+  나중에 css가 website라는 ID를 가진 input을 파란색으로 바꿔준다.
+
+  다시 한 번, id 값은 다른 태그에서 공유하면 안되고 unique 해야만 한다.
+  ->
