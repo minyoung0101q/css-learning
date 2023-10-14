@@ -9,29 +9,25 @@
     <title>Home - My first website</title>
   </head>
   <body>
-    <form id="website">
-      <label for="website">Website</label>
-      <input id="website" required placeholder="Name" type="date" />
-      <input type="submit" value="create account" />
-    </form>
+    <header>
+      <h1>The Nico Times</h1>
+    </header>
+    <main>
+      <p>paragraph, 문단, long text</p>
+      <span>short text</span>
+      <address>123 Road Altavista</address>
+    </main>
+    <footer>&copy; 2020 N.C</footer>
   </body>
 </html>
 <!--
-  id에 대해서
-  id는 unique identifier이다.
-  element당, 태그 하나당 하나의 id만 가질 수 있는 게 규칙이다.
-  id값은 unique 해야 한다.
+  의미 있는 태그 vs 의미 없는 태그
+  전반적으로 html 문서에서 most 많이 볼 태그는 div 태그
+  div는 아무 의미 없는 태그, 그저 box
+  div를 대체할 수 있는 의미 있는 태그들은 아래와 같다.
+  header는 div를 대체할 수 있고, 동일하게 박스 기능이다.
+  검색엔진도 header 태그로 작성한 코드를 이해할 수 있음
+  웹사이트를 html로 짤 때는 semantic 태그로 짜야 한다.
 
-  예를 들어서 아래와 같이 하면 안된다.
-  <form id="website">
-      <label for="website">Website</label>
-      <input id="website" required placeholder="Name" type="date" />
-      <input type="submit" value="create account" />
-    </form>
-  <input id="website" required placeholder="Name" type="date" />
-  위 코드를 보면 id 값은 unique 하지 않다.
-
-  나중에 css가 website라는 ID를 가진 input을 파란색으로 바꿔준다.
-
-  다시 한 번, id 값은 다른 태그에서 공유하면 안되고 unique 해야만 한다.
-  ->
+  span도 의미 없는 태그
+-->
