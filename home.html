@@ -9,27 +9,19 @@
       href="https://nomadcoders.co/m.png"
     />
     <style>
-      /* html은 전체 문서를 가리킴 */
       html {
         background-color: tomato;
       }
-
-      /*body는 그 안에 있는 내용 (div) 사이즈 만큼 됨, 우선 사이즈는 신경 쓰지 말고 넘어가기
-      body는 8px의 margin을 가지고 있음
-      다시 margin은 공간인데 body의 border로부터 바깥에 있는 공간을 말함
-      body의 size는 div의 height만큼 됨
-      body는 일반적으로 블록 요소
-      */
       body {
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 5px;
-        margin-bottom: 10px;
+        /* margin: 10px; 상하좌우 모두 적용됨 */
+        /* margin: 20px 15px; 20px은 상하, 15px은 좌우 적용 순서 */
+        /* 상, 오, 하, 왼 (시계 방향) */
+        margin: 0; /* margin을 0으로 줘도 collapsing margins 현상 때문에 div의 높이에 따라 80px로 설정됨 */
         background-color: thistle;
       }
 
       div {
-        margin-left: 50px;
+        margin: 80px 15px;
         height: 150px;
         width: 150px;
         background-color: whitesmoke;
@@ -40,32 +32,25 @@
     <div></div>
   </body>
 </html>
-<!--
-  block으로 넘어가서!
-  block과 inline이 다른 점은 높이와 너비만이 아니다. 차이점이 더 있다. 
-  inline은 box가 아니다.
-  block은 box이다.
-  box는 특징 3가지가 있다. margin, padding, border
-  이게 inline과 차이점이다.
+<!--위 코드에서 무슨 일인지
+div의 margin이 body도 움직이고 있다.
+코드에서 div의 위쪽 margin은 80px이고, body의 위쪽 margin은 80px이다.
+body의 경계가 위로 밀려났다.
+처음에는 헷갈릴 수 있다, 현업 실무자도 헷갈릴 수 있을 정도이다.
+어디서 들여쓰기가 되었는지 모를 때가 있는데, 바로 이 현상을 collapsing margins이라고 한다.
+***이런 경우, 흰색 box의 경게가 보라색 box의 경계와 같다면 이 두 margin은 하나로 취급된다.
+collapsing margins 현상으로 위, 아래쫵에서만 일어난다.
 -->
 
 <!--
-  body {
-    display: block;
-    margin: 8px;
-}
-위 스타일이 브라우저가 제공하는 기본 스타일로 
-위, 오, 아, 왼 등의 4가지 모든 방향에 8px을 준다.
--->
-<!--
-  box의 속성은 3가지, 그 중 margin에 대해
-  니콜라 쌤이 적어두라고 한 부분은 다음과 같다.
+  정리
+  collapsing margins 현상이 일어나는 경우는 다음과 같다.
+  흰 box의 경계가 보라색 box의 경계와 같을 때 일어나고 
+  그 때 두 box의 margin은 하나가 된다는 것이다.
+  경계가 만나면 하나가 된다는 것이고, 오직 위 아래에서만 발생한다.
 
-  margin은 box의 border(경계)의 바깥에 있는 공간이다.
-  body는 경계 바깥으로 공간을 가지고 있다.
--->
-
-<!--정리 : margin은 공간인데 box(bodrder)의 경계로부터 바깥에 있는 공간
-block: 높이와 너비 요소가 있다.
-inline: 높이와 너비 요소가 없다.
+  그렇다면 아래처럼 하려면 어떻게 해야 할까?
+  보라색이 위쪽까지 있고 흰색 box가 보라색 box의 경계과 맞닿지 않고 그 안에 위치하려면 말이다.
+  즉, collapsing margins 현상이 일어나지 않게 하기 위해서 말이다.
+  이 때 등장하는 것이 바로 padding이다.
 -->
