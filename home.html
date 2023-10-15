@@ -13,10 +13,7 @@
         background-color: tomato;
       }
       body {
-        /* margin: 10px; 상하좌우 모두 적용됨 */
-        /* margin: 20px 15px; 20px은 상하, 15px은 좌우 적용 순서 */
-        /* 상, 오, 하, 왼 (시계 방향) */
-        margin: 0; /* margin을 0으로 줘도 collapsing margins 현상 때문에 div의 높이에 따라 80px로 설정됨 */
+        margin: 0;
         background-color: thistle;
       }
 
@@ -32,25 +29,11 @@
     <div></div>
   </body>
 </html>
-<!--위 코드에서 무슨 일인지
-div의 margin이 body도 움직이고 있다.
-코드에서 div의 위쪽 margin은 80px이고, body의 위쪽 margin은 80px이다.
-body의 경계가 위로 밀려났다.
-처음에는 헷갈릴 수 있다, 현업 실무자도 헷갈릴 수 있을 정도이다.
-어디서 들여쓰기가 되었는지 모를 때가 있는데, 바로 이 현상을 collapsing margins이라고 한다.
-***이런 경우, 흰색 box의 경게가 보라색 box의 경계와 같다면 이 두 margin은 하나로 취급된다.
-collapsing margins 현상으로 위, 아래쫵에서만 일어난다.
--->
-
 <!--
-  정리
-  collapsing margins 현상이 일어나는 경우는 다음과 같다.
-  흰 box의 경계가 보라색 box의 경계와 같을 때 일어나고 
-  그 때 두 box의 margin은 하나가 된다는 것이다.
-  경계가 만나면 하나가 된다는 것이고, 오직 위 아래에서만 발생한다.
+  collapsing margins 현상에 대한 정의를 기억하는 것은 어려울 것이다.
+  그냥 잊어버리자.
+  *** 경계, border이 닿아서 margin이 같아졌구나(상, 하만), 이렇게 이해하자.
+  => 정리 : border가 같아져서 margin이 같아졌구나(샹, 하만 큰값으로 설정)
+  
 
-  그렇다면 아래처럼 하려면 어떻게 해야 할까?
-  보라색이 위쪽까지 있고 흰색 box가 보라색 box의 경계과 맞닿지 않고 그 안에 위치하려면 말이다.
-  즉, collapsing margins 현상이 일어나지 않게 하기 위해서 말이다.
-  이 때 등장하는 것이 바로 padding이다.
 -->
