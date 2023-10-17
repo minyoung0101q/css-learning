@@ -10,30 +10,19 @@
     />
     <style>
       body {
-        height: 100vh;
-        /* 
-        vh는 viewport라고 부르는데, viewport를 screen이라는 말로 생각해도 된다. 
-        100 screen height는 화면 높이의 100%를 말한다.
-        body가 화면의 100%로 채워진다.
-        */
+        height: 100vh; /* body가 화면의 크기에 맞도록 바뀜, 아이폰이든 아이폰맥스든 그 화면의 크기에 맞게!! */
         margin: 20px;
         display: flex;
-        /* justify-content: center; 센터로 이동한다.* /
-        /* justify-content: flex-end; 오른쪽 끝으로 이동한다. */
-        /* justify-content: flex-start;  flex start는 default 값으로, 왼쪽 끝에 붙는다. */
-        /* justify-content: space-evenly;  space-evenly는 빈 공간을 같은 크기로 나누어 배치한다. 아주 고르게. */
-        /* justify-content: space-around; */
         justify-content: space-between;
-        /* align-items: center; */
-        /*align-items: flex-end; 맨 아래로 이동한다.*/
-        /* align-items: flex-start align-items는 기본적으로 flex-start의 값을
-          가진다. */
-        /*align-items: stretch;  이 경우 stretch는 적용되지 않는다. div 태그에 height이 정해져 있기 때문이다. 
-        stretch는 div를 늘어나게 하는데 정해져 있으니,,height를 없애줘야 가능하다.*/
         align-items: center;
       }
       div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 300px;
+        font-size: 28px;
+        color: white;
         height: 300px;
         background-color: teal;
       }
@@ -43,98 +32,33 @@
     </style>
   </head>
   <body>
-    <div></div>
-    <div id="second"></div>
-    <div></div>
+    <div>1</div>
+    <div id="second">2</div>
+    <div>3</div>
   </body>
 </html>
 <!--
-  브라우저와 인터넷 커뮤니티에서는 inline-block의 문제점을 고쳐보고자 했다.
-  분명히 박스의 위치를 바꾸는 쉬운 방법이 있습니다아!
-  아주 좋은 방법은 flexbox 이다.
+  flexBoxPartTwo
+  주축과 교차축은 디폴트로 수평, 수직이다.
+  
+  flex-direction: row
+  flex-direction: column
+
+  display: flex;를 했을 때 default는 수평이다.
+  flex-direction : column; 이렇게 설정하면 축을 서로 뒤바꾼다.
+  flex-direction: column 이면 주축은 수직이 되고 교차축은 수평이 된다.
 -->
 
 <!--
-  flexbox는 박스들을 어떤 곳이든 둘 수 있어서 좋다.
-  2d 레이아웃에서도 잘 작동한다.
-  flexbox를 사용할 때 세 개의 규칙을 지키는 게 정말 중요하다.
+  div는 body가 움직이라는 대로 움직이고 있는데
+  이제 숫자를 가진 div 또한 flex 컨테이너로 만들 수 있다.
+  이제 div 안에 justify-content와 align-items를 줄 수 있다.
+  말 그대로 자식인 숫자를 이동시키는 것이다!
 
-  세 개의 규칙은 아래와 같다.
-  1. 자식 엘리먼트에는 어떤 것도 적지 말아야 한다.
-  부모 엘리먼트에만 명시해야 한다.
-  ex) 예를 들어, 위의 코드에서는 아래와 같이 코드 작성이 되어 있다.
-  <body>
-    <div></div>
-    <div></div>
-    <div></div>
-  </body>
-  div의 부모는 <body></body> 태그이다. 즉 자식을 움직이고 싶으면 부모에 display flex속성을 적어주면 된다.
-  body 태그에 적어주면 된다.
-  정리하면, 아래와 같다.
-  박스들을 우리가 원하는 아무 곳에 움직이게 하려면 부모 엘리먼트를 felx container로 만들어야 한다.
-  body에 display: flex;를 선언해줌으로써 이제 body가 자식들을 제어할 수 있다.
-  이게 flexbox를 위한 첫번째 규칙이다.
-  ***flexbox의 첫번째 규칙 : 자식에게 명시하지 않고 부모에게 명시한다. div의 부모를 display: flex;로 만든다.
-
-  display: flex;로 선언하고 나서부터는 다른 많은 속성들을 수정할 수 있다.
-  ***그 중 하나가 justify-content 이다.
-
+  flex 컨테이너 안에 자식이 있고 자식 엘리먼트도 flex 컨테이너인 상태이다.
 -->
 
 <!--
-  flexbox의 두번째, 세번째 규칙은 다음과 같다.
-  justify-content는 주축과 교차축이 있다.
-  main axis와 cross axis.
-  justify-content는 주축에 적용 되는 것이다.
-  align-items는 교차축에 적용 되는 것이다.
-
-  기본적으로 교차축은 수직이다.
-  기본적으로 주축은 수평이다.
-
-  위에서 기본적이라고 언급하는 것은 나중에 이 속성을 바꿀 수 있기 때문이다.
--->
-
-<!--
-  정리
-  기본적으로 주축은 수평 교차축이 수직
-  justify-content: 주축에 적용
-  align-items: 교차축에 적용
--->
-
-<!--
-  align-items는 justify-content만큼 많은 속성을 가지고 있지는 않다.
--->
-
-<!--
-  빠르게 정리
-  display: inline-block은 반응형 적용이 안된다. 정해진 형식이 없다.
-  특징은 box(높이와 너비가 있는데)이지만, 옆에 요소가 올 수 있다.
-  그래서 flexbox를 써준다. display: flex;
-  flexbox는 이렇게 활용한다.
-  1. 자식 요소를 변경하고 싶으면 부모 요소에 적용시킨다.
-  justify-content와 align-items를 적용하고 싶으면 먼저 display: flex;를 해줘야 한다.
-  display: flex;를 하면 해당 엘리먼트인 body가 flex 컨테이너가 될 것이다.
-  flex 컨테이너는 두 개의 축을 가지고 있는데
-  주축과 교차축이다.
-  디폴트로 주축은 수평이고 교차축은 수직이다.
-  justify-content는 주축에 적용되고 align-items는 교차축에 적용되는 것이다.
-  justify-content: center, flex-end, flex-start 등
-  align-items: center, flex-start, stretch, flex-end 등
-
-  여기서 주의할 점!
-  justify-contet: center => 이게 무조건 수평 기준 가운데에 위치하는 것이 아니다.
-  주축이 나중에 수직으로 바뀔 수도 있으니까
-  주축에 적용 이것만 기억하자
-  justify-content는 주축에 적용된다.
-  align-items는 교차축에 적용된다.
-
-  이 규칙만 이해하면 flexbox는 아주 쉬울 것이다.
-
-  body가 height를 가지고 있지 않다면 박스 크기만큼 크게 되는데
-  그러면 align-items를 설정하고 바꾸더라도 변경하지 않을 것이다
-  이럴 경우 body에 height: 100vh;를 추가해주면 된다.
-  화면 크기에 따라 바뀌기 때문에 
-  vh를 사용해야 한다.
-  vh는 아이폰, 맥 또는 그것보다 큰 화면에서 모두 다르다.
-  이제는 px와 vh를 안다.
+  다음 커밋에서는 flexbox의 몇 가지 속성에 대해 좀 더 알아 볼 것이다
+  wrapping에 대하여!
 -->
