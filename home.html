@@ -13,55 +13,27 @@
         height: 1000vh;
         margin: 20px;
       }
-
-      div {
-        width: 150px;
-        height: 150px;
-        background-color: wheat;
-        position: relative;
-      }
-
-      div:first-child {
+      span {
         background-color: tomato;
       }
-
-      /* 마지막 div가 pseduo selector를 갖게 해보자! */
-      /* last-child : 리스트에 있는 div들 중 마지막에 있는 것을 말한다. */
-      div:last-child {
+      span:nth-child(2),
+      span:nth-child(4) {
         background-color: teal;
       }
     </style>
   </head>
   <body>
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
   </body>
 </html>
 <!--
-  pseudo selectors
-  시작하기 전에 니코쌤 : 이게 복잡해 보이더라도 걱정할 필요가 없다고 한다.
-  이해는 된 것 같은데 다시 뒤로 돌아가서 기억해야 하고가 반복될 수 있는데..
-  나중에 실습할 때 우리가 배운 걸 다시 연습해볼 거니까 걱정하지 말라고 한다.
-  지금 당장은 개념만 이해하면 된다.
--->
-
-<!--
-  pseudo selectors는 좀 더 세부적으로 엘리먼트를 선택해주는 것이다.
-  지금 우리는 세 가지 방법을 알고 있다.
-  body처럼 태그의 이름만 쓰거나, .green 처럼 점을 쓰고 클래스 이름을 쓰거나, id처럼 #green 으로 쓰거나
-  
-  그런데 가끔 다른 방식으로 요소를 선택하고 싶을 수도 있지용
-
-  클래스를 선택하는데 그게 span 다음에 오는 클래스라던가, 처음이나 마지막에 있는 클래스만 선택하고 싶다든강
-  이런 복잡한 과정을  pseduo selectors로 할 수가 있다!
--->
-
-<!--
-  pseudo selector를 사용하는 게 class나 id를 만드는 것보다 좋은 선택이다.
-  html 코드는 건들지 않고 css에서 선택만 하고 있다.
+  두번째, 네번째 span이 background-color로 green 색을 갖게 한다. 
 -->
