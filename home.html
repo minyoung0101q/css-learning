@@ -19,29 +19,16 @@
         height: 300px;
         color: white;
         background-color: teal;
-      }
-      #green {
-        background-color: teal;
-        position: fixed; /* chrome 실행했을 때 볼 수 있듯이 위로 옮겨졌기 때문에 different div를 볼 수 없다. */
-        opacity: 0.2; /* 숫자가 클수록 진함 */
-      }
-      #different {
-        background-color: wheat;
+        position: static;
       }
     </style>
   </head>
   <body>
-    <div id="green"></div>
-    <div id="different"></div>
+    <div></div>
   </body>
 </html>
 <!--
-  position: fixed;는 netflix에서도 쓰인다.
-  netflix의 메뉴 같은 경우를 예시로 들 수 있다.
--->
-<!--
-  position: fixed; 기억하기!
-  fixed를 사용하면 레이어를 부수고 다른 레이어에 위치해 있을 것이다.
-  모든 것의 위에 있는 것이다.
-  가장 위에 있는 것이다!!
+  position: static => default로 적용되는 것
+  position: static; 은 레이아웃이 박스를 처음 위치하는 곳에 두는 것을 말한다.
+  스크롤해도 고정되지 않는다.p
 -->
