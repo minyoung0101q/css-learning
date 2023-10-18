@@ -17,33 +17,31 @@
       div {
         width: 300px;
         height: 300px;
+        color: white;
         background-color: teal;
       }
+      #green {
+        background-color: teal;
+        position: fixed; /* chrome 실행했을 때 볼 수 있듯이 위로 옮겨졌기 때문에 different div를 볼 수 없다. */
+        opacity: 0.2; /* 숫자가 클수록 진함 */
+      }
       #different {
-        top: 5px; /* 초록색 위치를 신경 쓰지 않고 있음 -> top, left, right, bottom 이라는 프로퍼티 중에 하나만 수정하더라고 노란색 div는 초록색 div 위로 가게 되어 있다. 
-        이제는 서로 다른 레이어에 있는 것이다. 
-        전에는 같은 레이어에 있어서 서로 접촉하고 있었다면 top, left, bottom, right 중에 하나만 수정해도 앞에 있는 레이어로 넘어갈 것이다. 
-        */
-        left: 200px;
-        position: fixed;
         background-color: wheat;
-        width: 350px;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <div id="green"></div>
     <div id="different"></div>
   </body>
 </html>
 <!--
-  flexbox에 대해서 알아봤고, 이제는 유용하나 position이라는 속성이 있는데, 이것을 알아볼 것이당
-  position 속성
-
-  position은 레이아웃 보다는 위치를 아주 조금 위로, 아주 조금 오른쪽으로 옮기고 싶을 때 사용하는 것이다.
-  position에서 처음로 다룰 내용은 position: fixed; 이다.
-  position: fixed;  => body를 1000vh, 즉 화면의 크기를 1000 뷰 포트로 바꾸고 스크롤을 해보면 div의 위치는 fixed이기 때문에 그 자리 그대로 고정이 되어 있다.
-  
-  
-
+  position: fixed;는 netflix에서도 쓰인다.
+  netflix의 메뉴 같은 경우를 예시로 들 수 있다.
+-->
+<!--
+  position: fixed; 기억하기!
+  fixed를 사용하면 레이어를 부수고 다른 레이어에 위치해 있을 것이다.
+  모든 것의 위에 있는 것이다.
+  가장 위에 있는 것이다!!
 -->
