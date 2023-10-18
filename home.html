@@ -16,8 +16,7 @@
       span {
         background-color: tomato;
       }
-      span:nth-child(2),
-      span:nth-child(4) {
+      span:nth-child(even) {
         background-color: teal;
       }
     </style>
@@ -32,8 +31,11 @@
     <span>hello</span>
     <span>hello</span>
     <span>hello</span>
+    <span>hello</span>
   </body>
 </html>
 <!--
-  두번째, 네번째 span이 background-color로 green 색을 갖게 한다. 
+  hello 배경색이 번갈아가면서 바꾸기
+  하나, 하나 수작업을 할 수는 없다.
+  even은 짝수니까 짝수번째 자리에 있는 span의 색깔을 지정한대로 바꿔준다.
 -->
