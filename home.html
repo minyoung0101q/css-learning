@@ -9,48 +9,31 @@
       href="https://nomadcoders.co/m.png"
     />
     <style>
-      body {
-        height: 1000vh;
-        margin: 20px;
-      }
-      span {
-        background-color: tomato;
-      }
-      /* 2n은 even, 2n+1은 홀수, 3n+1은 3개씩 마다 바뀐다. */
-      span:nth-child(3n + 1) {
+      div:first-child {
         background-color: teal;
+      }
+      div:last-child {
+        background-color: greenyellow;
+      }
+      div:nth-child(3) {
+        background-color: wheat;
+      }
+      div:nth-child(2n) {
+        /* 2n 아니면 even */
+        background-color: black;
       }
     </style>
   </head>
   <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
   </body>
 </html>
-
 <!--
-  span:nth-child(2),
-  span:nth-child(4) {
-    background-color: wheat;
-  }
-  span:nth0child(even) {
-
-  }
-  span:nth-child(odd) {
-
-  }
-  div:first-child {
-
-  }
-  div:last-child {
-
-  }
+  pseduo selectors 다시 복습
+  위와 같이 body 태그 밑에 <div>만 5줄을 두었고, 이 5개의 div를 감싸는 div는 존재하지 않는다.
+  이럴 때는 style 코드를 위와 같이 작성할 수 있다.
 -->
