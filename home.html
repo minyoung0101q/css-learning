@@ -17,18 +17,38 @@
       div {
         width: 300px;
         height: 300px;
-        color: white;
+        background-color: wheat;
+      }
+      .green {
         background-color: teal;
-        position: static;
+        height: 100px;
+        width: 100px;
+        position: relative; /* position을 relative로 하면 top, bottom, left, right 속성을 사용할 수 있다. */
+        top: -10px;
+        left: -10px;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <div>
+      <div class="green"></div>
+    </div>
   </body>
 </html>
 <!--
-  position: static => default로 적용되는 것
-  position: static; 은 레이아웃이 박스를 처음 위치하는 곳에 두는 것을 말한다.
-  스크롤해도 고정되지 않는다.p
+  position: relative;
+  relative은 실제 유용하게 쓰인다.
+  가끔 조금씩만 오른쪽, 왼쪽으로 옮기고 싶을 때가 있다.
+  위의 예시는 위의 코드를 확인하면 된다.
+-->
+<!--
+  display: flex; -> inline-block 대신 실무에서 쓴다. felxbox는 부모에게 적용시키고 해당 자식을 이동시킨다. jsutify-content나 align-items를 쓰려면 display: flex;를 선언해 준다. 해당 element에.
+  position: fixed; -> 스크롤해도 고정된다. 레이아웃을 부수고 제일 위에 위치한다. 
+  position: static; -> position의 기본값으로, 스크롤을 내려도 요소가 처음 위치한 곳에 그대로 위치한다, 즉 스크롤해도 요소가 고정되지 않는다.
+  position: relative -> element가 처음 위치한 곳을 기준으로 수정한다.
+  relative를 선언 후 top: -10px; 이런 식으로 이동한다.
+  relative를 선언하면 top, bottom, left, right 속성을 사용할 수 있다.
+-->
+<!--
+  relative는 엘리먼트가 처음 놓인 자리에서 상하좌우로 움직인다.
 -->
