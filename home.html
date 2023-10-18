@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
-    <title>Home - My first website</title>
+    <title>Home - My first website.</title>
     <meta charset="UTF-8" />
     <link
       rel="shortcut icon"
@@ -9,31 +9,32 @@
       href="https://nomadcoders.co/m.png"
     />
     <style>
-      div:first-child {
-        background-color: teal;
+      body {
+        height: 100vh;
+        margin: 50px;
       }
-      div:last-child {
-        background-color: greenyellow;
+      span {
+        color: tomato;
       }
-      div:nth-child(3) {
-        background-color: wheat;
-      }
-      div:nth-child(2n) {
-        /* 2n 아니면 even */
-        background-color: black;
+      p span {
+        /* div p span => 이렇게 작성하는 것도 똑같이 작동한다. */
+        /* 부모인 p 안에서 span을 찾으라는 것이다. css가 p를 찾고 그 안에서 span을 찾는다. */
+        color: teal;
       }
     </style>
   </head>
   <body>
-    <div>hello</div>
-    <div>hello</div>
-    <div>hello</div>
-    <div>hello</div>
-    <div>hello</div>
+    <div>
+      <span>hello</span>
+      <p>
+        Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+        consectetur Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+        amet consectetur <span>inside</span>
+      </p>
+    </div>
   </body>
 </html>
 <!--
-  pseduo selectors 다시 복습
-  위와 같이 body 태그 밑에 <div>만 5줄을 두었고, 이 5개의 div를 감싸는 div는 존재하지 않는다.
-  이럴 때는 style 코드를 위와 같이 작성할 수 있다.
+  p안에 있는 span을 바꾸고 싶은데 어떻게 해야 할까?
+
 -->
