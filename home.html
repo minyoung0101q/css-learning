@@ -25,6 +25,14 @@
         color: white;
         text-decoration: none;
       }
+      /* div span { */
+      /* div 태그 밑의 모든 span 한테 underline을 주게 된다.
+        우리가 원하는 것은 div 태그 밑의 hello span에 underline을 주는 것이다. */
+      /* text-decoration: underline;
+      } */
+      div > span {
+        text-decoration: underline;
+      } /* span은 바로 밑 자식이어야 한다. */
     </style>
   </head>
   <body>
@@ -39,6 +47,6 @@
   </body>
 </html>
 <!--
-  p안에 있는 span을 바꾸고 싶은데 어떻게 해야 할까?
-
+  div의 바로 밑 자식들 중 span에 text-decoration: underline;을 주고 싶은 상황
+  
 -->
