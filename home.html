@@ -11,13 +11,15 @@
     <style>
       body {
         height: 100vh;
-        background-color: yellowgreen;
         padding: 5px;
         border-radius: 10px;
       }
+      /* input:optional => <input> 요소 중에서 required 속성이 없는 입력 요소를 선택하는 CSS 선택자 */
+      input:optional {
+        border: 3px solid tomato;
+      }
       input:required {
-        /* input이 required이라면 border를 1px solid tomato로 설정 */
-        border: 1px solid tomato;
+        border: 3px solid teal;
       }
     </style>
   </head>
