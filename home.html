@@ -13,40 +13,27 @@
         height: 100vh;
         margin: 50px;
       }
-      span {
-        background-color: yellowgreen;
-        padding: 5px;
-        border-radius: 10px;
+      p + span {
+        /* p 다음으로 오는 span에 underline decoration을 준다. */
         text-decoration: underline;
+        /* + selector를 활용 */
       }
-      p span {
-        /* div p span => 이렇게 작성하는 것도 똑같이 작동한다. */
-        /* 부모인 p 안에서 span을 찾으라는 것이다. css가 p를 찾고 그 안에서 span을 찾는다. */
-        color: white;
-        text-decoration: none;
-      }
-      /* div span { */
-      /* div 태그 밑의 모든 span 한테 underline을 주게 된다.
-        우리가 원하는 것은 div 태그 밑의 hello span에 underline을 주는 것이다. */
-      /* text-decoration: underline;
-      } */
-      div > span {
-        text-decoration: underline;
-      } /* span은 바로 밑 자식이어야 한다. */
     </style>
   </head>
   <body>
     <div>
-      <span>hello</span>
       <p>
         Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
         consectetur Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
         amet consectetur <span>inside</span>
       </p>
+      <span>hello</span>
+      <span>hi</span>
     </div>
   </body>
 </html>
 <!--
-  div의 바로 밑 자식들 중 span에 text-decoration: underline;을 주고 싶은 상황
-  
+  p > span : p 바로 밑 자식 span
+  p span : p 의 모든 자식 중 span들
+  p + span : p 다음으로 오는 span
 -->
