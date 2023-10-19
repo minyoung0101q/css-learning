@@ -14,12 +14,17 @@
         padding: 5px;
         border-radius: 10px;
       }
-      /* input:optional => <input> 요소 중에서 required 속성이 없는 입력 요소를 선택하는 CSS 선택자 */
-      input:optional {
-        border: 3px solid tomato;
+      input {
+        border: 3px solid wheat;
       }
       input:required {
-        border: 3px solid teal;
+        border-color: tomato;
+      }
+      input[type='password'] {
+        background-color: thistle;
+      }
+      input[placeholder='username'] {
+        background-color: red;
       }
     </style>
   </head>
@@ -32,3 +37,7 @@
     </div>
   </body>
 </html>
+<!--
+  attribute selector
+  
+-->
