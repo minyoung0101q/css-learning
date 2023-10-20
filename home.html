@@ -14,25 +14,18 @@
         padding: 5px;
         border-radius: 10px;
       }
-      form {
-        border: 1px solid salmon;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-      }
-      form:focus-within {
-        background-color: sienna;
+      input::placeholder {
+        color: yellowgreen;
       }
     </style>
   </head>
   <body>
     <form>
-      <input type="text" name="" id="" />
-      <input type="text" name="" id="" />
-      <input type-="text" name="" id="" />
+      <input type="text" placeholder="이름을 입력하세요" />
     </form>
   </body>
 </html>
 <!--
-  focus는 클릭하고 놓아도 해당 클릭 영역에 커서가 있으면 계속 적용된다.
+  복습하기 전 pseduo element 3개 알아보기
+  ::placeholder는 placeholder를 스타일링해준다.
 -->
