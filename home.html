@@ -14,28 +14,25 @@
         padding: 5px;
         border-radius: 10px;
       }
-      a:visited {
-        color: tomato;
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
       }
-      a:hover {
-        color: teal;
-      }
-      a:focus {
-        color: turquoise;
+      form:focus-within {
+        border-color: seagreen;
       }
     </style>
   </head>
   <body>
-    <a href="https://apple.com">Go to apple</a>
+    <form>
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type-="text" name="" id="" />
+    </form>
   </body>
 </html>
 <!--
-  개발자 도구에서 확인할 수 있는 가장 중요한 selector는
-  크롬창에서 보면 :hov, :active, :focus, :visited, :focus-within, :focus-visible, :target 등이 있다.
--->
-<!--
-  active : 버튼을 누르고 있을 때 발생하는 것, 클릭을 놓으면 원상태로 돌아감
-  hover : 마우스가 대상 위에 있을 때, 클릭하는 게 아니라 마우스 커서가 대상 위에 있을 때를 말함
-  focus : 키보드로 선택되었을 때를 말함
-  visited : 
+  focus-within은 focused인 자식을 가진 부모 엘리먼트의 상태를 말함
 -->
