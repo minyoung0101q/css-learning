@@ -9,49 +9,36 @@
         align-items: center;
         justify-content: center;
       }
-      /* 애니메이션을 만드는 두 번째 방법 */
-      @keyframes superSexyCoinFlip {
-        0% {
-          transform: rotateY(0);
-        }
-        25% {
-          trnasform: scale(2);
-        }
-        50% {
-          border-radius: 0px;
-          transform: rotateY(180deg) translateY(-100px);
-          border-color: tomato;
-        }
-        75% {
-          transform: scale(5);
-        }
-        100% {
-          transform: rotateY(0) translateY(0px);
-        }
-      }
-      img {
-        height: 80px;
+      div {
+        background-color: teal;
         width: 200px;
-        border: 10px solid black;
-        border-radius: 50%;
-        animation: superSexyCoinFlip 5s ease-in-out infinite;
+        height: 200px;
+      } /* 최대 너비는 400px */
+      /* media query는 가로 적용 */
+      /* 400px이 넘지 않는 스크린 */
+      @media screen and (max-width: 600px) {
+        div {
+          background-color: tomato;
+        }
       }
     </style>
   </head>
   <body>
-    <img src="img/logo.png" />
-    <span>sfdfasfadf</span>
+    <div></div>
   </body>
 </html>
 <!--
-  몇몇은 애니메이션으로 만들 수 없다.
-  font-size 등
+  Media quiery는 오직 CSS만을 이용해서 스크린의 사이즈를 알 수 있는 방법이다.
+  내 웹사이트를 보는 사용자 스크린 말하는 거예용
 -->
 <!--
-  만약 두 개를 주고 싶다면 0% 100% 이렇게 할 필요는 없다.
-  이전 영상에서 한 것처럼 from - to 를 활용하면 된다.
-  CSS 애니메이션을 활용하면 원하는 것을 마음껏 할 수 있다.
+  웹사이트를 아이폰으로 보거나, 혹은 아주 큰 화면으로 본다면, 혹은 누구가가 landscape 모드(가로 모드)로 본다면 말이양
+  세로는 portrait모드
+  우리의 css 스타일을 스크린의 사이즈에 따라서 맞게 바꿀 수 있당
 -->
 <!--
-  다음 파트는 response design 파트입니당.
+  media query는 너무 멋있다앙 반응형으로 만들 수 있으니까 너무 멋있다앙
+-->
+<!--
+  원한다면 더 많은 미디어 쿼리 조건을 넣을 수가 있당
 -->
