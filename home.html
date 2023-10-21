@@ -14,34 +14,28 @@
         width: 200px;
         height: 200px;
       }
-      /* 650과 750사이에 있을 때 */
-      @media screen and (min-width: 650px) and (max-width: 750px) {
+      /* turquoise만 나오는 건 cascading에 의한 것, 순서 바꾸면 모든 색깔이 나오게 할 수도 있음 */
+      @media screen and (max-width: 600px) {
         div {
           background-color: tomato;
         }
       }
+      @media screen and (max-width: 800px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        div {
+          background-color: turquoise;
+        }
+      }
+      /* CSS 우선순위에 따라 turquoise가 적용됩니다. 600px과 800px은 1200px에 의해 덮이게 됩니다.
+      @media screen and (max-width: 1200px) 이것만 실행됩니다.
+      그래서 1200px 이하의 화면에만 적용됩니다. 나머지는 무시됩니다, 600px과 800px이요. */
     </style>
   </head>
   <body>
     <div></div>
   </body>
 </html>
-<!--
-  Media quiery는 오직 CSS만을 이용해서 스크린의 사이즈를 알 수 있는 방법이다.
-  내 웹사이트를 보는 사용자 스크린 말하는 거예용
--->
-<!--
-  웹사이트를 아이폰으로 보거나, 혹은 아주 큰 화면으로 본다면, 혹은 누구가가 landscape 모드(가로 모드)로 본다면 말이양
-  세로는 portrait모드
-  우리의 css 스타일을 스크린의 사이즈에 따라서 맞게 바꿀 수 있당
--->
-<!--
-  media query는 너무 멋있다앙 반응형으로 만들 수 있으니까 너무 멋있다앙
--->
-<!--
-  원한다면 더 많은 미디어 쿼리 조건을 넣을 수가 있당
--->
-<!--
-  4.5 media queries 4분 28초
-  
--->
