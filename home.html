@@ -13,11 +13,10 @@
         background-color: teal;
         width: 200px;
         height: 200px;
-      }
-      /* turquoise만 나오는 건 cascading에 의한 것, 순서 바꾸면 모든 색깔이 나오게 할 수도 있음 */
-      @media screen and (max-width: 600px) {
+      } /* 아래와 같이 바꾸면 가능합니다. */
+      @media screen and (max-width: 1200px) {
         div {
-          background-color: tomato;
+          background-color: turquoise;
         }
       }
       @media screen and (max-width: 800px) {
@@ -25,14 +24,11 @@
           background-color: wheat;
         }
       }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 600px) {
         div {
-          background-color: turquoise;
+          background-color: tomato;
         }
       }
-      /* CSS 우선순위에 따라 turquoise가 적용됩니다. 600px과 800px은 1200px에 의해 덮이게 됩니다.
-      @media screen and (max-width: 1200px) 이것만 실행됩니다.
-      그래서 1200px 이하의 화면에만 적용됩니다. 나머지는 무시됩니다, 600px과 800px이요. */
     </style>
   </head>
   <body>
