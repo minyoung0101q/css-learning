@@ -8,8 +8,10 @@
         width: 120px;
         border: 10px solid black;
         border-radius: 50%;
-        transform: scale(2, 4);
-        /* X축으로 scale(크기 변경)을 4배로 만들어봄 */
+        transform: translateX(-10px); /* 왼쪽으로 10px씩 이동 */
+        /* 위 명령어는 transformation을 적용시키긴 하지만
+        다른 형제(sibling)를 변화시키진 않는다. */
+      }
     </style>
   </head>
   <body>
@@ -17,9 +19,6 @@
   </body>
 </html>
 <!--
-  transformations은 정말 멋있다!
-  말 그대로 한 요소를 transform(변형) 시킬 수 있기 때문이다.
-
-  transform은 무언가를 변화시킨다. 어떤 변화든 상관없이
-  위 코드가 바로 transformations이다.
+  translate(옮기기)도 할 수 있다.
+  
 -->
