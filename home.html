@@ -3,24 +3,24 @@
   <head>
     <title>The Nico Times</title>
     <style>
-      /* keyframes에는 두 가지 옵션이 있는데, 이 영상에서는 첫 번째 옵션을 배운다. 다음 영상에서 두 번째 옵션을 배운다.*/
-      /* 어느 한 지점부터 다른 한 지점까지의 애니메이션을 만들고 싶다. */
+      /* 애니메이션을 만드는 두 번째 방법 */
       @keyframes superSexyCoinFlip {
-        from {
+        0% {
           transform: rotateY(0);
         }
-        to {
-          transform: rotateY(180deg) translate(100px);
+        50% {
+          transform: rotateY(180deg) translateY(-100px);
+        }
+        100% {
+          transform: rotateY(0);
         }
       }
       img {
         height: 80px;
-        width: 80px;
+        width: 200px;
         border: 10px solid black;
         border-radius: 50%;
         animation: superSexyCoinFlip 5s ease-in-out infinite;
-        /* 페이지가 로드되자마자 5초동안 애니메이션이 일어나고 멈춘다. */
-        /* 뒤에 infinite를 붙이면 5초동안 재생되는데 무한으로 반복된다. */
       }
     </style>
   </head>
@@ -29,17 +29,3 @@
     <span>sfdfasfadf</span>
   </body>
 </html>
-<!--
-  마우스를 올리면 보이는 이것은 애니메이션이 아니다.
-  transition은 애니메이션으로 만든다, 어떤 상태에서 다른 상태로 변하는 것을
-  하지만, 이건 내가 마우스를 올렸을 때만 볼 수 있는 것이다.
-  hover state를 기준으로 했으니까.
--->
-<!--
-  만약, 계속 재생되는 애니메이션을 얻고싶으면 어떻게 해야 할까?
-  마우스를 위에 올리거나, transition 없이 말이당
-  지금은 이 애니메이션을 만들 것이당.
--->
-<!--
-  coin flip이라 불리는 애니메이션을 만든다.
--->
