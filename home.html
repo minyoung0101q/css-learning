@@ -14,19 +14,12 @@
         width: 200px;
         height: 200px;
       }
-      @media screen and (max-width: 600px) {
-        div {
-          background-color: tomato;
-        }
-      }
-      @media screen and (min-width: 601px) and (max-width: 800px) {
+      @media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: landscape) {
+        /* orientation: landscape => 가로 모드일 때 
+        즉, 핸드폰이 가로인지 세로인지도 감지할 수 있는 것이다. 
+        orientation: portrait 도 가능하다. */
         div {
           background-color: wheat;
-        }
-      }
-      @media screen and (min-width: 1200px) {
-        div {
-          background-color: turquoise;
         }
       }
     </style>
@@ -35,3 +28,6 @@
     <div></div>
   </body>
 </html>
+<!--
+  모바일 버전을 chrome이나 Brave으로 테스트하는 것은 크롬 inspect에서 기기 툴바 전환 클릭
+-->
