@@ -3,15 +3,24 @@
   <head>
     <title>The Nico Times</title>
     <style>
+      /* keyframes에는 두 가지 옵션이 있는데, 이 영상에서는 첫 번째 옵션을 배운다. 다음 영상에서 두 번째 옵션을 배운다.*/
+      /* 어느 한 지점부터 다른 한 지점까지의 애니메이션을 만들고 싶다. */
+      @keyframes superSexyCoinFlip {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(180deg) translate(100px);
+        }
+      }
       img {
         height: 80px;
         width: 80px;
         border: 10px solid black;
         border-radius: 50%;
-        transition: transform 5s ease-in-out; /* transition은 root에 있어야 함, state에 있으면 안됨 */
-      }
-      img:hover {
-        transform: matrix(1, 2, 3, 4, 5, 6); /* 90도 회전시킨다. */
+        animation: superSexyCoinFlip 5s ease-in-out infinite;
+        /* 페이지가 로드되자마자 5초동안 애니메이션이 일어나고 멈춘다. */
+        /* 뒤에 infinite를 붙이면 5초동안 재생되는데 무한으로 반복된다. */
       }
     </style>
   </head>
@@ -21,18 +30,16 @@
   </body>
 </html>
 <!--
-  transmatino을 조합할 수도 있다.
-  이전 영상에서 봤던 transition이랑 함께.
-
-  0에서 90도까지 어떻게 애니메이션으로 만들 수 있을까?
-
-  이제 우리는 애니메이션을 만들 수 있다.
+  마우스를 올리면 보이는 이것은 애니메이션이 아니다.
+  transition은 애니메이션으로 만든다, 어떤 상태에서 다른 상태로 변하는 것을
+  하지만, 이건 내가 마우스를 올렸을 때만 볼 수 있는 것이다.
+  hover state를 기준으로 했으니까.
 -->
 <!--
-  이게 3D이다. CSS 덕분에 가능하다. 그리고 요즘에는 브라우저가 아주 진보했기 때문에 가능하다.
-  CSS에 있는 모든 애니메이션은 GPU에 의해 돌아가고 있다.
-  컴퓨터의 그래픽카드에 의해서 말이다.
+  만약, 계속 재생되는 애니메이션을 얻고싶으면 어떻게 해야 할까?
+  마우스를 위에 올리거나, transition 없이 말이당
+  지금은 이 애니메이션을 만들 것이당.
 -->
 <!--
-  transform mdn 구글링
+  coin flip이라 불리는 애니메이션을 만든다.
 -->
