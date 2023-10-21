@@ -3,30 +3,27 @@
   <head>
     <title>The Nico Times</title>
     <style>
-      a {
-        color: wheat;
-        background-color: tomato;
-        text-decoration: none;
-        padding: 3px 5px;
-        border-radius: 5px;
-        font-size: 55px;
-        transition: color 1s cubic-bezier(0.6, 0, 0.735, 0.045),
-          border-radius 5s ease-in-out, background-color 10s ease-out; /* all은 모든 state를 의미한다. */
-      }
-      a:active {
-        border-radius: 20px;
-        color: tomato;
-        background-color: wheat;
+      img {
+        height: 150px;
+        width: 120px;
+        border: 10px solid black;
+        border-radius: 50%;
+        transform: rotateZ(10deg);
+        /* Y축을 돌리고 있는 것 */
+        /* 이번엔 X축도 돌릴 것 */
+        /* 회전시키고 있는 것이다!! 90deg를 해서 90도로 돌려버리면 일자이기 때문에 볼 수가 없다. */
+        /* 이건 진짜 개쩌는 것이다! css로 3d까지 할 수 있으므로 */
       }
     </style>
   </head>
   <body>
-    <a href="#">Go home</a>
+    <img src="img/logo.png" />
   </body>
 </html>
 <!--
-  transition은 hover 대신에 active, focus, focus-within 일 때에도 작동한다.
--->
-<!--
-  다음 커밋은  transformations에 대해 알아볼 것
+  transformations은 정말 멋있다!
+  말 그대로 한 요소를 transform(변형) 시킬 수 있기 때문이다.
+
+  transform은 무언가를 변화시킨다. 어떤 변화든 상관없이
+  위 코드가 바로 transformations이다.
 -->
