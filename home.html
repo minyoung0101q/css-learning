@@ -10,7 +10,8 @@
         padding: 3px 5px;
         border-radius: 5px;
         font-size: 55px;
-        transition: all 1s cubic-bezier(0.6, 0, 0.735, 0.045); /* all은 모든 state를 의미한다. */
+        transition: color 1s cubic-bezier(0.6, 0, 0.735, 0.045),
+          border-radius 5s ease-in-out, background-color 10s ease-out; /* all은 모든 state를 의미한다. */
       } /* ease-in-out은 기본적으로 브라우저에게 애니메이션이 어떻게 변할지 말해주는 것이다. */
       /* 실무에서는 대부분 사용하게 될 것은 아래와 같다.
       ease-in, ease-out, ease-in-out
