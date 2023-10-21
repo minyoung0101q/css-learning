@@ -8,14 +8,21 @@
         width: 120px;
         border: 10px solid black;
         border-radius: 50%;
-        transform: translateX(-10px); /* 왼쪽으로 10px씩 이동 */
+        transform: translateX(100px); /* 왼쪽으로 10px씩 이동 */
         /* 위 명령어는 transformation을 적용시키긴 하지만
         다른 형제(sibling)를 변화시키진 않는다. */
+        /* transformation은 box element를 변형시키지 않는다. 
+        margin, padding이 적용되지 않는다. 일종의 3D transformation이기 때문이다. */
+        /* 우리는 margin, padding을 위해서 translateX, translateY를 사용하지 않는다. 
+        다른 요소의 box를 변형시키지 않고 원하는 요소를 이동시키기 위해서 사용하는 것이다.*/
+        /* transformation은 다른 box element, 이미지에 영향을 끼치지 않는다. */
+        /* transformation은 box 차원에서 이동하지 않는다. */
       }
     </style>
   </head>
   <body>
     <img src="img/logo.png" />
+    <span>sfdfasfadf</span>
   </body>
 </html>
 <!--
