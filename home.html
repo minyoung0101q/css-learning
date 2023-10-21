@@ -13,20 +13,20 @@
         background-color: teal;
         width: 200px;
         height: 200px;
-      } /* 아래와 같이 바꾸면 가능합니다. */
-      @media screen and (max-width: 1200px) {
-        div {
-          background-color: turquoise;
-        }
-      }
-      @media screen and (max-width: 800px) {
-        div {
-          background-color: wheat;
-        }
       }
       @media screen and (max-width: 600px) {
         div {
           background-color: tomato;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 800px) {
+        div {
+          background-color: wheat;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        div {
+          background-color: turquoise;
         }
       }
     </style>
