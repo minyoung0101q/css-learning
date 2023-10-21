@@ -4,19 +4,14 @@
     <title>The Nico Times</title>
     <style>
       img {
-        height: 150px;
+        height: 120px;
         width: 120px;
         border: 10px solid black;
         border-radius: 50%;
-        transform: translateX(100px); /* 왼쪽으로 10px씩 이동 */
-        /* 위 명령어는 transformation을 적용시키긴 하지만
-        다른 형제(sibling)를 변화시키진 않는다. */
-        /* transformation은 box element를 변형시키지 않는다. 
-        margin, padding이 적용되지 않는다. 일종의 3D transformation이기 때문이다. */
-        /* 우리는 margin, padding을 위해서 translateX, translateY를 사용하지 않는다. 
-        다른 요소의 box를 변형시키지 않고 원하는 요소를 이동시키기 위해서 사용하는 것이다.*/
-        /* transformation은 다른 box element, 이미지에 영향을 끼치지 않는다. */
-        /* transformation은 box 차원에서 이동하지 않는다. */
+        transition: transform 5s ease-in-out; /* transition은 root에 있어야 함, state에 있으면 안됨 */
+      }
+      img:hover {
+        transform: rotateX(90deg); /* 90도 회전시킨다. */
       }
     </style>
   </head>
@@ -26,6 +21,10 @@
   </body>
 </html>
 <!--
-  translate(옮기기)도 할 수 있다.
-  
+  transmatino을 조합할 수도 있다.
+  이전 영상에서 봤던 transition이랑 함께.
+
+  0에서 90도까지 어떻게 애니메이션으로 만들 수 있을까?
+
+  이제 우리는 애니메이션을 만들 수 있다.
 -->
