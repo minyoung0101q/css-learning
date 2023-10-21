@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="kr">
   <head>
-    <title>Home - My first website.</title>
-    <meta charset="UTF-8" />
-    <link
-      rel="shortcut icon"
-      sizes="16x16 32x32 64x64"
-      href="https://nomadcoders.co/m.png"
-    />
+    <title>The Nico Times</title>
     <style>
-      /* root는 기본적으로 모든 document 뿌리가 됨, 출발점이 되는 것임 */
-      :root {
-        --main-color: #f3920b; /* --main-color를 document의 root에 저장하는 것이다. */
-        --default-border: 1px solid var(var(--main-color));
-      } /* 변수는 dash 2개 다음에 dash 1개 그리고 변수 이름, 이렇게 지어야 한다. */
-      /* 그리고 변수를 사용할 때는 var(...)이렇게 쓰면 된다. */
-      body {
-        height: 100vh;
-        margin: 50px;
-      }
-      p {
-        background-color: var(
-          --main-color
-        ); /* 이제 이렇게 써줄 수가 있다. 지금부터는 컬러를 수정하고 싶으면 한 번만 하면 된다.*/
-      }
       a {
-        color: var(--main-color);
-        border: var(--default-border);
+        color: wheat;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: background-color 10s; /* 10초에 걸쳐서 배경색이 토마토 색으로 변한다. */
+      }
+      a:hover {
+        /* button에 hover state를 추가해준다. */
+        /* animation은 없는 상태, 상태에서 상태로 변할 때 바로 변한다. 그 어떠한 transition도 없는 상태에서. */
+        /* 커서가 대상 위에 없는 상태에서 커서를 대상 위에 갖다대면 상태가 바로 변한다. */
+        /* 이럴 때 바로 transition이라는 속성이 필요하다.
+        transition 속성은 state가 없는 요소에 붙어야 한다. */
+        color: tomato;
+        background-color: wheat;
       }
     </style>
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adippisicing elit. Quasi
-      blandittiis possimus numquam facere molestiae nisi ab? Ea, ateque hic? Sed
-      voluptatem nnemo sit aliquid libero sunt asperiores officia impedit
-      adipisci
-    </p>
-    <div>
-      <a href="#">website</a>
-    </div>
+    <a href="#">Go home</a>
   </body>
 </html>
 <!--
-  이렇게 하면 하나 하나 색깔을 줘야 하기에 귀찮다, 그러므로 아래와 같이 
-  :root라 불리는 엘리먼트에 변수를 추가한다.
+  고급 css, advanced css : animation, transformation, transition
+  예전에는 자바스크립트를 활용해서 할 수 있던 작업을 지금은 css로 할 수 있다.
 -->
 <!--
-  지난 커밋처럼 색깔만 저장할 수 있는 것은 아니다.
-  아래와 같은 것들 또한 저장이 가능하다.
-  --default-border: 1px solid var(--main-color);
--->
-<!--
-  이것이 custom properties라고 하는 것이다.
-  구글링으로 css custom properties를 검색한다. => mdn 파일 한국어로 번역된 것을 확인한다.
+  transition
+  어떤 상태에서 다른 상태로의 "변화"를 애니메이션으로 만드는 방법
+
+  먼저 state를 만든다.
 -->
