@@ -1,20 +1,11 @@
-<!-- 우리가 index.html로 설정하는 이유: 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어 있기 때문, 영어에서 index는 첫번째라는 의미를 가진다. -->
-<!-- html 코드를 작성할 때 쓸 수 있는 단축키 꿀tip -->
-<!-- 최하단에 HTML과 Prettier가 있는지 확인 있어야 함 -->
-<!-- 이 코스가 끝날 때쯤 viewport가 뭔지 알아 볼 예정 -->
-<!-- 명심할 것: 기억하고 암기하는 게 아니라 이해해야 하는 것이다! -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- 반응형 디자인을 구현하거나 모바일 기기와 데스크톱 브라우저에서 웹 페이지가 올바르게 표시되도록 하는데 사용됨 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kokoa Talk</title>
   </head>
   <body>
-    <!-- statusbar부터 만든당, id를 status-bar 이렇게 준다, 이유는 상태바는 위의 화면에서 하나 밖에 없기 때문이당 
-    status-bar column 이렇게 클래스 이름을 작성한다면 클래스 이름이 두 개가 되는 것이다.
-    status-bar__column은 한 개의 클래스 이름을 말한다.-->
     <div id="status-bar">
       <div class="status-bar__column">
         <span>No Service</span>
@@ -31,3 +22,22 @@
     </div>
   </body>
 </html>
+<!--
+    BEM 규칙 -> mdn 으로 찾아본다.
+    때때로 블록은 modifier를 가지게 되는데 이렇게 btn--orange처럼 쓰일 수 있다.
+    bem 규칙은 정말 편하당
+
+    bem 규칙은 우리가 코드를 더 쉽게 읽기 위함이다.
+    bem에서 문제가 하나 생기는데 클래스가 엄청 커질 수 있다는 것이다.
+    입문자들은 이런 점을 힘들어 할 수 있다. 하지만, 가끔은 프로들이 어떻게 하는지 알아보고 코드를 이해하려고 해보는 게 정말 중요하다.    
+-->
+<!--
+    BEM 엘리먼트를 활용하는 것이 훻씬 좋다고 생각하기에 니콜라 쌤은 이걸 추천한다.
+    BEM 엘리먼트 사용
+    그냥 hltml을 보고 오 이 버튼은 orange네 이런 식으로 알아볼 수 있도록 한다.
+-->
+<!--
+    코드 작성을 할 때 두 가지 경우로 나눠서 작성할 예정이다.
+    1. BEM을 적용해서 id를 사용하지 않고 클래스만으로 사용한다. bem 규칙을 적용시켜서.
+    2. 보통 id와 class를 사용한다.
+-->
