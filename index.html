@@ -1,0 +1,33 @@
+<!-- 우리가 index.html로 설정하는 이유: 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어 있기 때문, 영어에서 index는 첫번째라는 의미를 가진다. -->
+<!-- html 코드를 작성할 때 쓸 수 있는 단축키 꿀tip -->
+<!-- 최하단에 HTML과 Prettier가 있는지 확인 있어야 함 -->
+<!-- 이 코스가 끝날 때쯤 viewport가 뭔지 알아 볼 예정 -->
+<!-- 명심할 것: 기억하고 암기하는 게 아니라 이해해야 하는 것이다! -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 반응형 디자인을 구현하거나 모바일 기기와 데스크톱 브라우저에서 웹 페이지가 올바르게 표시되도록 하는데 사용됨 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Talk</title>
+  </head>
+  <body>
+    <!-- statusbar부터 만든당, id를 status-bar 이렇게 준다, 이유는 상태바는 위의 화면에서 하나 밖에 없기 때문이당 
+    status-bar column 이렇게 클래스 이름을 작성한다면 클래스 이름이 두 개가 되는 것이다.
+    status-bar__column은 한 개의 클래스 이름을 말한다.-->
+    <div id="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- To Do: Wifi Icon -->
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!-- Battery Icon -->
+        <!-- Lightning Icon -->
+      </div>
+    </div>
+  </body>
+</html>
