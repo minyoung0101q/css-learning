@@ -15,8 +15,6 @@
         width: 200px;
         height: 200px;
       }
-      /* min-device-width, max-device-width 는 오직 핸드폰에서만 적용된다. 
-      데스크톱 브라우저에서는 당연히 이해하지 못한다. */
       @media screen and (min-device-width: 601px) and (max-width: 1200px) {
         div {
           background-color: wheat;
@@ -26,9 +24,16 @@
         font-size: 36px;
       }
       /* 가로 모드일 때 span을 display: none; */
+      /* 가로모드(landscape), 세로 모드(portrait) */
+      /* mdn에서 모든 예시를 확인할 수 있다. */
       @media screen and (orientation: landscape) {
         span {
           display: none;
+        }
+      }
+      @media print {
+        body {
+          background-color: tomato;
         }
       }
     </style>
@@ -47,4 +52,8 @@
 
   다른 종류의 media query 또한 존재한다.
   min-device-width: 601px;
+-->
+<!--
+  이론 파트의 마지막
+  이제 실전 파트, 클론 코딩으로 간당
 -->
