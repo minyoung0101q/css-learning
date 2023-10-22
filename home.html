@@ -15,7 +15,9 @@
         width: 200px;
         height: 200px;
       }
-      @media screen and (min-width: 601px) and (max-width: 1200px) {
+      /* min-device-width, max-device-width 는 오직 핸드폰에서만 적용된다. 
+      데스크톱 브라우저에서는 당연히 이해하지 못한다. */
+      @media screen and (min-device-width: 601px) and (max-width: 1200px) {
         div {
           background-color: wheat;
         }
@@ -37,9 +39,12 @@
   </body>
 </html>
 <!--
-  모바일 버전을 chrome이나 Brave으로 테스트하는 것은 크롬 inspect에서 기기 툴바 전환 클릭
--->
-<!--
-  media query 영상을 10분 21초부터 본다.
-  
+  media queries recap
+  media query는 우리가 조건을 추가할 수 있는 방법으로 코드의 조건을 적는 것이다.
+  이 조건이 참이라면 css를 적으라고 말해주는 것이다.
+  element 안에 css를 적용시켜야 한다. 
+  media query는 and를 써서 연결된다.
+
+  다른 종류의 media query 또한 존재한다.
+  min-device-width: 601px;
 -->
