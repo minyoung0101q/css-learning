@@ -51,11 +51,16 @@ body {
 /* css not mdn */
 
 #login-form input[type="submit"] {
-  background-color: var(--yellow);
+  background-color: var(--gray);
   cursor: pointer;
   padding: 20px 0px;
   border-radius: 5px;
 }
+
+#login-form input[type="submit"]:hover {
+  background-color: var(--yellow);
+}
+
 #login-form a {
   text-align: center;
   text-decoration: none;
