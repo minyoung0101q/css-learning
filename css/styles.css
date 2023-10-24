@@ -1,54 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-
-/* 두 가지 font를 가져온다. */
-/* 기본은 Open Sans입니다, Open Sans가 없다면 Yellotail이 적용됩니다. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import 'reset.css';
+@import 'variables.css';
+@import "status-bar.css";
+/* style.css 파일은 다른 css 파일을 추가하는 파일로 쓸 예정 */
 body {
   font-family: 'Open Sans', sans-serif;
 }
-/* justify-content 대신 컨테이너 하나를 말그대로 중심에 놓는 css hack(기술)을 사용한다. */
-/* justify-content에 space-between도 좋지만 다른 width를 가지고 있기 때문에 space-between이 조금 안맞는다. */
-/* CSS HACK
-css hack은 마치 레시피 같은 것이다. 좀 이상할 수는 있어도 많이 써먹을 수도 있다.
-좀 이상하지만 어떤 이유에서든지 작동이 되기 때문에 hack이라고 부르는 것이다.
-어떻게 할 것이냐, justify-content에 space-between을 하는 대신에 center라고 할 것이다. 
-다음에는 모든 column에 33%의 widith를 가지게 할 것이다.
-모든 게 33%의 width를 가지고 있다.
-이제 두 번째 column의 자식을 중앙에 두게 만들 것이다.
-그리고 마지막 column은 오른쪽으로 배치한다.
-그리고 아이콘 사이의 공간을 만든다.
-*/
-/* FontAwesome에 아이콘을 크게 만드는 class가 있다.
-2xl 등
-이제 시계가 완전히 중앙에 위치하게 됐당ㅎㅎ 
-*/
-.status-bar {
+
+.welcome-header {
+  margin: 78px 0;
+  text-align: center;
   display: flex;
-  justify-content: center;
-}
-.status-bar__column {
-  width: 33%;
-}
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
 }
-.status-bar__column .fa-battery-full {
-  margin: 0px 5px;
+.welcome-header__title {
+  margin-bottom: 27px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.8;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
 }
 
-/* Google fonts에서 폰트를 불러올 때 내가 사용하지 않을 폰트를 선택하지 않는 것도 중요하다.
-이 커밋에서는 Open Sans를 사용할 것,
+#login-form input {
+  border: none;
+  padding: 16px 0px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
-font를 불러올 때 head에 link를 사용해서 추가할 수도 있지만 css를 사용해서 추가하는 것을 더 추천한다.
-*/
-/* font를 불러올 때 모든 font를 선택해서 추가하려고 하지 말자.
-그렇게 하면 웹사이트가 무거워진다, 파일을 추가하는 것이기에. 
-*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+/* ColorZilla를 사용해서 스크린샷 색상을 가져온다. */
+/* css not mdn */
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /* 부모의 색을 상속받는 것을 의미함
+  default는 black이기 때문에 black으로 설정됨 */
+  font-size: 13px;
+}
