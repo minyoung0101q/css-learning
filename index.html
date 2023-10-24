@@ -26,9 +26,38 @@
         <h1 class="welcome-header__title">Welcome to KakaoTalk</h1>
         <p class="welcome-header__text">If you haver a Kakao Account, log in with your email or phone number.</p>
     </header>
-    <form id="login-form">
-        <input type="text" placeholder="Email or phone number" />
-        <input type="password" placeholder="Password" />
+    <!-- 
+      action은 어떤 페이지로 데이터를 보낼 건지 지정할 수 있다. 
+      data를 friends.html로 보낼 것
+    -->
+    <!-- 
+      method는 POST와 GET 중 하나를 쓸 수 있다.
+      POST는 지금은 쓸 수 없다. 이유는 POST란 백엔드 서버에 정보를 전송하는 방식이기 때문이다, 우리는 현재 서버를 가지고 있지 않다. 
+      그래서 우리는 GET 방식을 사용한다. GET 방식은 보안에 취약하다. username과 password를 get 방식으로 보내면 안된다. 
+      URL에 포함되어도 상관없는 정보들을 GET 방식으로 보내는 것이다. 
+    -->
+    <!--
+      위 설명이 form의 전부에 대한 설명은 아니다.
+      get방식이나 post 방식에 대해 좀 더 알아보고 싶다면, 풀스택 유튜브 클론 코딩으르 들어보면 된다, form을 많이 쓰기 때문이다.
+    -->
+    <!--
+      지금은 get을 쓰기에 보안상 괜찮다.
+      get 방식은 가끔씩 사용하기에 좋다.
+      예를 들어 google에 seoul을 검색해보면 url에서 query는 seoul이라고 쓰여있다.
+      만약, potato로 검색을 하게 된다면 구글 검색창도 당연히 potato로 뜬답니당
+      
+      다시 반복하는데 우리는 현재 서버가 없기 때문에 get 방식을 쓰고 있다.
+      만약 data를 서버로 보내고 싶다면 post 방식을 쓸 수 있다.
+      지금은 따로 설정해 놓은 서버가 없기 때문에 get을 활용한다.
+    -->
+    <!--
+      method 이곳에 get을 꼭 써두어야만 한당
+      프로젝트를 업로드할 곳에서 post 방식은 작동하지 않을 것이기 때문이당
+      그래서 get을 써야 한다.우리는 현재 페이지를 이동했당
+    -->
+    <form action="friends.html" method="get" id="login-form">
+        <input required name="username" type="text" placeholder="Email or phone number" />
+        <input required name="password" type="password" placeholder="Password" />
         <input type="submit" value="Log In" />
         <input type="submit" value="Sign Up" />
         <a href="#">Find Kakao Account or Password</a>
