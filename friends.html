@@ -1,1 +1,72 @@
-<h1>hello this is friends</h1>
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends - KakaoTalk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+        </svg>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fa-solid fa-battery-full fa-2x"></i>
+        <i class="fa-solid fa-bolt-lightning"></i>
+      </div>
+    </div>
+
+    
+    
+    <!-- 최하단에 navigation bar 먼저 
+        nav 태그는 안에 보통 ul과 li 태그로 이루어진다.
+        검색엔진 구글도 navigation을 찾아서 ul의 li 안에 있는 link를 가져오게끔 설정되어 있다.
+    -->
+    <!--
+      단축키 => nav>ul>li*4>a 한다음에 enter
+    -->
+    <!--
+      <a href="#"></a> => #이 의미하는 것은 현재 페이지 내의 링크이다, 아무것도 하지 않고 현재 페이지에 머무는 것이다.
+    -->
+   <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__btn">
+        <a class= "nav__link" href="friends.html">
+          <i class="fa-solid fa-user fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav__btn">
+        <a class="nav__link" href="#">
+          <span class="nav__notification">1</span>
+          <i class="fa-regular fa-comment fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav__btn">
+        <a class= "nav__link" href="#">
+          <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+        </a>
+      </li>
+      <li class="nav__btn">
+        <a class= "nav__link" href="#">
+          <span class="nav__ellipsis"></span>
+          <i class="fa-solid fa-ellipsis fa-2x"></i>
+        </a>
+      </li> <!-- ellipsis -->
+    </ul>
+   </nav>
+
+
+
+    <script
+      src="https://kit.fontawesome.com/6b10c328de.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

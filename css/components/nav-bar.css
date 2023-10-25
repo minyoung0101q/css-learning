@@ -1,0 +1,49 @@
+.nav {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #F9F9FA;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(87, 86, 86, 0.3);
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    color: #2e363e;
+    position: relative;
+}
+
+
+
+.nav__notification {
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600px;
+    position: absolute;
+    /* position: absolute는 가장 가까운 relative를 가진 부모를 기준으로 움직인다. */
+    left: 15px;
+    bottom: 15px;
+}
+
+.nav__ellipsis {
+    background-color: tomato;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    display: flex;
+    position: absolute; /* 가장 가까운 부모인 nav__link를 기준으로 움직인당 */
+    left: 25px;
+    bottom: 30px;
+}
+

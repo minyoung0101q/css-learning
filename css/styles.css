@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 @import 'reset.css';
 @import 'variables.css';
+
 /* Components */
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
+
 /* Screens */
 @import "screens/login.css";
 
 body {
   font-family: 'Open Sans', sans-serif;
+  height: 100vh;
 }
 /* styles.css 파일에는 font-family와 같이 모든 스크린에 적용될 수 있는 스타일을 써놓는게 니콜라 쌤 스타일임 */

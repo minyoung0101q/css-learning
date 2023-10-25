@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
     padding: 5px 3px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box; /* padding을 주고 싶을 때, css에게 box 사이즈를 변경하지 말라고 알려준다. */
   }
   .status-bar__column {
     width: 33%;
