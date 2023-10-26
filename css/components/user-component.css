@@ -1,0 +1,53 @@
+.user-component {
+  justify-content: space-between;
+}
+
+/* user-component__column을 가진 div가 옆으로 정렬된 것 */
+/* .user-component {
+  display: flex;
+} */
+/* use-components는 두 개의 column을 가진 div이다. */
+/* user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중에서 첫째만 선택한다. */
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component__avatar {
+  width: 64px;
+  height: 67px;
+  border-radius: 30px;
+  margin-right: 17px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* 스크린샷들을 보면서, 반복되는 것들을 component로 만들면 작업하기 아주 쉬워질 것이다. */
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+/* User Component part Two 1분 4초 */
+
+.user-component__avatar-sm {
+  width: 58px;
+  height: 58px;
+  border-radius: 23px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+}
