@@ -13,3 +13,8 @@
 .screen__header__icons span {
   margin-left: 20px;
 }
+
+/* screen-header dark mode */
+.dark-mode .screen__header {
+  color: var(--white);
+}

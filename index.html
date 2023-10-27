@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to KakaoTalk</title>
+    <title class="title">Welcome to KakaoTalk</title>
   </head>
   <body>
     <div class="status-bar">
@@ -16,7 +16,7 @@
         <span>18:43</span>
       </div>
       <div class="status-bar__column">
-        <span>110%</span>
+        <span>1110%</span>
         <i class="fa-solid fa-battery-full fa-2xl"></i>
         <i class="fa-solid fa-bolt-lightning"></i>
       </div>
@@ -28,20 +28,21 @@
       </p>
     </header>
     <form action="friends.html" method="get" id="login-form">
-      <input
-        required
-        name="username"
-        type="text"
-        placeholder="Email or phone number"
-      />
-      <input required name="password" type="password" placeholder="Password" />
-      <input type="submit" value="Log In" />
-      <input type="submit" value="Sign Up" />
-      <a href="#">Find Kakao Account or Password</a>
+      <label for="username" class="label">email or phone number</label>
+      <input id="username" required name="username" type="text" />
+      <label for="password" class="label">password</label>
+      <input id="password" required name="password" type="password" />
+      <input class="" type="submit" value="Log In" />
+      <input class="" type="submit" value="Sign Up" />
+      <div class="change-mode">
+        <i class="fa-solid fa-share"></i>
+        <a href="#" id="dark-mode-toggle">change mode</a>
+      </div>
     </form>
     <script
       src="https://kit.fontawesome.com/6b10c328de.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

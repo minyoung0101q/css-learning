@@ -1,31 +1,31 @@
 .status-bar {
-    display: flex;
-    justify-content: center;
-    padding: 5px 3px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    box-sizing: border-box; /* padding을 주고 싶을 때, css에게 box 사이즈를 변경하지 말라고 알려준다. */
-  }
-  .status-bar__column {
-    width: 33%;
-  }
-  .status-bar__column:first-child span {
-    margin-right: 5px;
-  }
-  .status-bar__column:nth-child(2) {
-    display: flex;
-    justify-content: center;
-  }
-  .status-bar__column:last-child {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .status-bar__column .fa-battery-full {
-    margin: 0px 5px;
-  }
-  /* 
+  display: flex;
+  justify-content: center;
+  padding: 5px 3px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box; /* padding을 주고 싶을 때, css에게 box 사이즈를 변경하지 말라고 알려준다. */
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}
+/* 
   reset css는 대부분의 태그에 margin: 0, padding: 0, border: 0 등을 가진 css 파일을 말한다. 
   우리는 브라우저에 의해 적용되는 스타일을 원하지 않는다, 완전 처음부터 시작하고 싶다.
   https://meyerweb.com/eric/tools/css/reset/ => 이 사이트로 이동해서 reset.css 파일을 가져온다.

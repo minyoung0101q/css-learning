@@ -27,3 +27,19 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+
+/* 다크 모드 */
+.dark-mode #friends-display-link i {
+  color: rgba(255, 255, 255, 0.936);
+}
+
+.dark-mode #friends-display-link {
+  background-color: #374151;
+  color: var(--white);
+}
+
+.dark-mode .friends-screen__channel-header,
+.dark-mode .friends-screen__channel {
+  border-color: var(--white);
+  color: var(--white);
+}

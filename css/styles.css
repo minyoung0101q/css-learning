@@ -19,3 +19,22 @@ body {
   height: 100vh;
 }
 /* styles.css 파일에는 font-family와 같이 모든 스크린에 적용될 수 있는 스타일을 써놓는게 니콜라 쌤 스타일임 */
+
+/* dark 모드 전환 */
+.change-mode {
+  display: flex;
+  justify-content: center;
+  color: var(--yellow);
+}
+
+.change-mode:hover {
+  color: #374151;
+}
+
+.dark-mode .change-mode {
+  color: var(--white);
+}
+
+.dark-mode .change-mode:hover {
+  color: var(--yellow);
+}

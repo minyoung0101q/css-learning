@@ -1,61 +1,185 @@
+/* light mode인 경우의 CSS */
+
 .welcome-header {
-    margin: 78px 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .welcome-header__title {
-    margin-bottom: 27px;
-    font-size: 25px;
-  }
-  .welcome-header__text {
-    width: 60%;
-    opacity: 0.8;
-  }
-  #login-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 30px;
-  }
-  
-  #login-form input {
-    border: none;
-    padding: 16px 0px;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  #login-form input:not([type="submit"]) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  #login-form input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-  }
-  
-  #login-form input:focus {
-    border-color: var(--yellow);
-  }
-  /* ColorZilla를 사용해서 스크린샷 색상을 가져온다. */
-  /* css not mdn */
-  
-  #login-form input[type="submit"] {
-    background-color: var(--gray);
-    cursor: pointer;
-    padding: 20px 0px;
-    border-radius: 5px;
-  }
-  
-  #login-form input[type="submit"]:hover {
-    background-color: var(--yellow);
-  }
-  
-  #login-form a {
-    text-align: center;
-    text-decoration: none;
-    color: inherit; /* 부모의 색을 상속받는 것을 의미함
-    default는 black이기 때문에 black으로 설정됨 */
-    font-size: 13px;
-  }
+  margin: 78px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-header__title {
+  margin-bottom: 27px;
+  font-size: 25px;
+  transition: color 0.3s ease-in-out;
+}
+.welcome-header__title:hover {
+  color: var(--yellow);
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
+}
+.welcome-header__text:hover {
+  color: var(--yellow);
+}
+
+.label {
+  opacity: 0.8;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 16px 0px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+/* ColorZilla를 사용해서 스크린샷 색상을 가져온다. */
+/* css not mdn */
+
+#login-form input[type="submit"] {
+  background-color: var(--gray);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  /* color: inherit; 부모의 색을 상속받는 것을 의미함 
+      default는 black이기 때문에 black으로 설정됨 */
+  font-size: 18px;
+  color: #374151;
+}
+
+/* 다크 모드 스타일 */
+/* status bar dark mode */
+.dark-mode .status-bar__column:first-child span {
+  color: var(--white);
+}
+
+.dark-mode .status-bar__column:nth-of-type(2) span {
+  color: var(--white);
+}
+
+.dark-mode .status-bar__column:last-child span {
+  color: var(--white);
+}
+
+.dark-mode .status-bar__column i {
+  color: var(--white);
+}
+
+/* login screen dark mode */
+.dark-mode .label {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.dark-mode {
+  background-color: #1f2937;
+}
+
+.dark-mode .welcome-header__title {
+  margin-bottom: 27px;
+  font-size: 25px;
+  transition: color 0.3s ease-in-out;
+  color: var(--white);
+}
+.dark-mode .welcome-header__title:hover {
+  color: var(--yellow);
+}
+
+.dark-mode .welcome-header__text {
+  width: 60%;
+  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
+  color: var(--white);
+}
+.dark-mode .welcome-header__text:hover {
+  color: var(--yellow);
+  border-color: var(--white);
+}
+
+.dark-mode #login-form input {
+  border: 1px solid var(--white);
+  padding: 16px 0px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.dark-mode #login-form {
+  background-color: #374151;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.dark-mode #login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.dark-mode #login-form input {
+  border-radius: 5px;
+  border: 1px solid var(--white);
+  background-color: #374151;
+  padding: 16px 0px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.dark-mode #login-form input[type="text"] {
+  padding-left: 10px;
+  color: var(--white);
+}
+
+.dark-mode #login-form input[type="password"] {
+  padding-left: 10px;
+  color: var(--white);
+}
+
+.dark-mode #login-form input[type="submit"] {
+  background-color: var(--white);
+  border-color: var(--white);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode #login-form input[type="submit"]:hover {
+  border: 1px solid var(--white);
+  background-color: #374151;
+  color: var(--white);
+}
