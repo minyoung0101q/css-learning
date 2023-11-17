@@ -8,10 +8,12 @@
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
 @import "components/user-component.css";
+@import "components/badge.css";
 
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
+@import "screens/find.css";
 
 body {
   color: #2e363e;
@@ -19,6 +21,10 @@ body {
   height: 100vh;
 }
 /* styles.css 파일에는 font-family와 같이 모든 스크린에 적용될 수 있는 스타일을 써놓는게 니콜라 쌤 스타일임 */
+
+.main-screen {
+  padding: 0px var(--horizontal-space); /* 상하가 0px, 좌우가 10px */
+}
 
 /* dark 모드 전환 */
 .change-mode {

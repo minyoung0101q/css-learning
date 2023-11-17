@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - KakaoTalk</title>
+    <title>Chats - KakaoTalk</title>
   </head>
   <body>
+    <!-- Status bar -->
     <div class="status-bar">
       <div class="status-bar__column">
         <span>No Service</span>
@@ -24,14 +25,45 @@
 
     <!-- header 생성 -->
     <header class="screen__header">
-      <h1 class="screen__header__title">Friends</h1>
+      <h1 class="screen__header__title">Chats</h1>
       <div class="screen__header__icons">
         <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-regular fa-comment-dots fa-lg"></i></span>
         <span><i class="fa-solid fa-music fa-lg"></i></span>
         <span><i class="fa-solid fa-gear fa-lg"></i></span>
       </div>
     </header>
 
+    <!-- chats screen -->
+    <main class="main-screen">
+      <!-- .user-component__column*2 + Enter -->
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
+            class="user-component__avatar user-component__avatar"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">minyoung</h4>
+            <h6 class="user-component__subtitle">
+              Keeping Promises to oneself safeguards one's future
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">21:22</span>
+          <div class="badge">1</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- dark mode -->
+    <div class="change-mode">
+      <i class="fa-solid fa-share"></i>
+      <a href="#" id="dark-mode-toggle">change mode</a>
+    </div>
+
+    <!-- nav bar -->
     <!-- 최하단에 navigation bar 먼저.
         nav 태그는 안에 보통 ul과 li 태그로 이루어진다.
         검색엔진 구글도 navigation을 찾아서 ul의 li 안에 있는 link를 가져오게끔 설정되어 있다.
@@ -42,70 +74,17 @@
     <!--
       <a href="#"></a> => #이 의미하는 것은 현재 페이지 내의 링크이다, 아무것도 하지 않고 현재 페이지에 머무는 것이다.
     -->
-
-    <a id="friends-display-link">
-      <i id="" class="fa-solid fa-circle-info"></i> Friends' Names Display
-      <i id="" class="fa-solid fa-chevron-right fa-xs"></i>
-    </a>
-
-    <main class="friends-screen">
-      <!-- .user-component__column*2 + Enter -->
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
-            class="user-component__avatar user-component__avatar--xl"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">minyoung</h4>
-            <!--<h6 class="user-component__subtitle">this text whatever</h6>-->
-          </div>
-        </div>
-        <div class="user-component__column"></div>
-      </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel-header">
-          <span>Channel</span>
-          <i class="fa-solid fa-chevron-up fa-xs"></i>
-        </div>
-        <div class="user-component">
-          <div class="user-component__column">
-            <img
-              src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
-              class="user-component__avatar user-component__avatar-sm"
-            />
-            <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">
-                Channel
-              </h4>
-            </div>
-          </div>
-          <div class="user-component__column">
-            <div>
-              <span>2</span>
-              <i class="fa-solid fa-chevron-right fa-xs"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <div class="change-mode">
-      <i class="fa-solid fa-share"></i>
-      <a href="#" id="dark-mode-toggle">change mode</a>
-    </div>
-
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
           <a class="nav__link" href="friends.html">
-            <i class="fa-solid fa-user fa-2x"></i>
+            <i class="fa-regular fa-user fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="fa-regular fa-comment fa-2x"></i>
+            <i class="fa-solid fa-comment fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">

@@ -50,10 +50,22 @@
 }
 
 .user-component__column:last-child {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
 }
 
 /* dark mode */
 .dark-mode .user-component__column div {
+  color: var(--white);
+}
+
+.dark-mode .user-component__time {
   color: var(--white);
 }

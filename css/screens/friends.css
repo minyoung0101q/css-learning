@@ -17,7 +17,7 @@
 
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: 1px solid rgb(0, 0, 0, 0.2);
+  border-top: var(--main-border);
   padding-top: 15px; /* border에서 안쪽으로 간격을 주는 방법: padding */
 }
 
@@ -41,5 +41,10 @@
 .dark-mode .friends-screen__channel-header,
 .dark-mode .friends-screen__channel {
   border-color: var(--white);
+  color: var(--white);
+}
+
+/* chats.html의 dark mode css 추가 */
+.dark-mode .user-component__subtitle {
   color: var(--white);
 }
