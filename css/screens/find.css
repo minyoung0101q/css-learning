@@ -51,6 +51,9 @@
 
 .open-post {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 위의 justify-content:space-between & align-items:center는 자주 같이 쓰이는 조합이다 */
 }
 
 .open-post__title {
@@ -90,4 +93,31 @@
 
 .open-post__member-status {
   color: #ffb0e0;
+}
+
+.open-post__photo {
+  position: relative; /* 부모에 relative */
+}
+
+.open-post__photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count {
+  background-color: var(--white);
+  color: rgba(0, 0, 0, 0.8);
+  padding: 3.5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute; /* absolute children은 relative father가 꼭 필요하다 */
+  bottom: 5px;
+  right: 5px;
+  font-size: 14px;
+}
+
+.open-post__heart-count span {
+  margin-left: 3px;
 }
