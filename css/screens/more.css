@@ -38,11 +38,12 @@
 .user-component__subtitle i {
   color: red;
 }
-.user-component__column i {
-  color: white;
-}
 
 /* dark-mode */
 .dark-mode .more-suggestions {
   border-top: 1px solid #ffffff;
+}
+
+.dark-mode .user-component__column i {
+  color: white;
 }
