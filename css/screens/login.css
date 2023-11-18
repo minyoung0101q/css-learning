@@ -80,18 +80,9 @@
 
 /* 다크 모드 스타일 */
 /* status bar dark mode */
-.dark-mode .status-bar__column:first-child span {
-  color: var(--white);
-}
-
-.dark-mode .status-bar__column:nth-of-type(2) span {
-  color: var(--white);
-}
-
-.dark-mode .status-bar__column:last-child span {
-  color: var(--white);
-}
-
+.dark-mode .status-bar__column:first-child span,
+.dark-mode .status-bar__column:nth-of-type(2) span,
+.dark-mode .status-bar__column:last-child span,
 .dark-mode .status-bar__column i {
   color: var(--white);
 }

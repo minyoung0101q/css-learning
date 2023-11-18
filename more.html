@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find - KakaoTalk</title>
+    <title>More - KakaoTalk</title>
   </head>
   <body>
     <!-- Status bar -->
@@ -25,71 +25,60 @@
 
     <!-- header 생성 -->
     <header class="screen__header">
-      <h1 class="screen__header__title">Find</h1>
+      <h1 class="screen__header__title">More</h1>
       <div class="screen__header__icons">
         <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-music fa-lg"></i></span>
         <span><i class="fa-solid fa-gear fa-lg"></i></span>
       </div>
     </header>
 
-    <!-- find screen -->
-    <main class="main-screen">
+    <!-- more screen -->
+    <!-- main-screen, more-screen 이렇게 클래스가 2개 -->
+    <main class="main-screen more-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">minyoung</h4>
+            <h6 class="user-component__subtitle">
+              +1 787-493-4219<i class="fa-solid fa-circle-exclamation"></i>
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
+      </div>
       <div class="icon-row">
         <div class="icon-row__icon">
-          <i class="fa-solid fa-qrcode"></i>
-          <span>QR Code</span>
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Calendar</span>
         </div>
         <div class="icon-row__icon">
-          <i class="fa-solid fa-address-book"></i>
-          <span>Add by Contacts</span>
+          <i class="fa-solid fa-face-smile-wink"></i>
+          <span>Emoticons</span>
         </div>
         <div class="icon-row__icon">
-          <i class="fa-solid fa-fingerprint"></i>
-          <span>Add by ID</span>
+          <i class="fa-solid fa-paint-roller"></i>
+          <span>Themes</span>
         </div>
         <div class="icon-row__icon">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Invite</span>
+          <i class="fa-solid fa-users"></i>
+          <span>Account</span>
         </div>
       </div>
-      <div class="recommended-friends">
-        <h6 class="recommended-friends__title">Recommended Friends</h6>
-        <span class="no-recommended-friends__title"
-          >You have no recommended friends</span
-        >
-      </div>
-      <!-- Open Chat -->
-      <div class="open-chat">
-        <div class="open-chat__header">
-          <h4 class="open-chat__title">Open Chat</h4>
-          <span
-            >Go to Openchat Home<i class="fa-solid fa-chevron-right fa-xs"></i
-          ></span>
-        </div>
-        <div class="open-post">
-          <div class="open-post__column">
-            <h5 class="open-post__title">#BTS</h5>
-            <h6 class="open-post__hashtags">#bts#army#friends</h6>
-            <!-- 대문자는 디자인적 요소이기 때문에 html에서는 소문자로 작성하고, css에서는 대문자로 작성한다 -->
-            <div class="open-post__members">
-              <img
-                src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
-              />
-              <span class="open-post__member-count">802 members</span>
-              <div class="divider"></div>
-              <span class="open-post__member-status">Active</span>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
+        <div class="more-suggestions__icons">
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right"></i>
             </div>
-          </div>
-          <div class="open-post__column">
-            <!-- 두 번째 column 작성 -->
-            <div class="open-post__photo">
-              <img
-                src="https://avatars.githubusercontent.com/u/130943387?s=96&v=4"
-              />
-              <div class="open-post__heart-count">
-                <i class="fa-solid fa-heart fa-xs"></i><span>326</span>
-              </div>
-            </div>
+            <span class="more-suggestions__icon-text">Kokoa Story</span>
           </div>
         </div>
       </div>
@@ -101,6 +90,7 @@
       <a href="#" id="dark-mode-toggle">change mode</a>
     </div>
 
+    <!-- Nav bar icon 4개 -->
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
@@ -116,7 +106,7 @@
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="find.html">
-            <i class="fa-solid fa-magnifying-glass-plus fa-2x"></i>
+            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">
@@ -136,3 +126,6 @@
     <script src="script.js"></script>
   </body>
 </html>
+<!--
+    #6.25 More Screen part One 4분 4초부터 듣장
+-->
