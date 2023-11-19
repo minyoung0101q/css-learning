@@ -40,6 +40,7 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 25px;
 }
 
 .message-row img {
@@ -54,6 +55,7 @@
   display: block;
 }
 
+/* message__info가 flex container라는 것을 기억하자 */
 .message__info {
   display: flex;
   align-items: flex-end;
@@ -73,3 +75,29 @@
   opacity: 0.8;
   font-size: 14px;
 }
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+/* order 속성은 flex childern에게만 적용됨
+하지만, 많은 코드가 필요하기에 바꿔 줄 것임
+*/
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+.message-row--own .message__time {
+  order: 0;
+} */
