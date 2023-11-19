@@ -102,6 +102,27 @@
   margin-left: 3px;
 }
 
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  /* will-change 프로퍼티는 기본적으로 브라우저에게 뭔가가 바뀔거라고 말해줄 때, 애니메이션을 좀 더 낫게 만든다, 애니메이션이 훨씬 나아 보인다  */
+  /* will-change: transform; */
+  animation: heartBeat 1s linear infinite;
+}
+
 .header__link {
   color: #2e363e;
   position: relative;
