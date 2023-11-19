@@ -1,0 +1,13 @@
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 10px;
+  font-size: 22px; /* 아이콘의 크기를 키우자 */
+}
