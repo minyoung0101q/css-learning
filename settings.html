@@ -25,32 +25,72 @@
 
     <!-- header 생성 -->
     <header class="alt-header">
-        <div class="alt-header__column">
-            <i class="fas fa-angle-left fa-2x"></i>
-        </div>
-        <div class="alt-header__column">
-            <h1 class="alt-header__title">Settings</h1>
-        </div>
-        <div class="alt-header__column">
-            <span><i class="fa-solid fa-magnifying-glass fa-2x"></i></span>
-        </div>
+      <div class="alt-header__column">
+        <a href="javascript:history.back();">
+          <!-- 이전 페이지로 이동 -->
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Settings</h1>
+      </div>
+      <div class="alt-header__column">
+        <!-- i는 가만히 두고 span을 이용해서 스타일링 하기 위해서 span으로 감싼 것이다 -->
+        <span><i class="fa-solid fa-magnifying-glass fa-2x"></i></span>
+      </div>
     </header>
-    
+
     <main class="main-screen">
-        <ul class="settings-list">
-            <li class="settings__setting">
-                <i class="fa-solid fa-bullhorn"></i>
-                <span>Notice</span>
-            </li>
-            <li class="settings__setting">
-                <i class="fa-solid fa-flask-vial"></i>
-                <span>Kakao Lab</span>
-            </li>
-            <li class="settings__setting">
-                <i class="fa-solid fa-circle-info"></i>
-                <span>Version</span>
-            </li>
-        </ul>
+      <ul class="settings-list">
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Notices</span>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-flask-vial"></i>
+            <span>Kakao Lab</span>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Version</span>
+          </div>
+          <div class="settings__setting-column">Latest Version</div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-lock"></i>
+            <span>Privacy</span>
+            <div class="n">N</div>
+          </div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-bell"></i>
+            <span>Display</span>
+            <div class="n">N</div>
+          </div>
+          <div class="settings__setting-column">Default theme</div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-user-group"></i>
+            <span>Friends</span>
+          </div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-comment"></i>
+            <span>Chats</span>
+          </div>
+        </li>
+      </ul>
     </main>
 
     <!-- dark mode -->
@@ -84,7 +124,8 @@
             <i class="fa-solid fa-ellipsis fa-2x"></i>
           </a>
         </li>
-        <!-- ellipsis -->
+      </ul>
+      <!-- ellipsis -->
     </nav>
 
     <script

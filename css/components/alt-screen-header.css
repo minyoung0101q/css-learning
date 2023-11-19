@@ -20,3 +20,8 @@
 .alt-header__column:last-child {
   margin-left: auto;
 }
+
+/* dark-mode */
+.dark-mode .alt-header {
+  color: #ffffff;
+}

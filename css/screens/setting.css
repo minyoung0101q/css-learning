@@ -4,10 +4,37 @@
   font-size: 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .settings__setting i {
   opacity: 0.8;
   margin-right: 10px;
-  font-size: 22px; /* 아이콘의 크기를 키우자 */
+  font-size: 22px; /* 아이콘의 크기를 지우자 */
+}
+
+.settings__setting-column:nth-child(2) {
+  position: relative;
+  opacity: 0.8;
+}
+
+.n {
+  position: absolute;
+  margin-top: -18px;
+  margin-left: 90px;
+  background-color: tomato;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600px;
+  font-size: 10px;
+}
+
+/* dark-mode */
+.dark-mode .settings__setting {
+  border-bottom: 1px solid #ffffff;
 }

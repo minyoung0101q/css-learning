@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Settings - KakaoTalk</title>
+    <title>Chat with minyoung - KakaoTalk</title>
   </head>
-  <body>
+  <body id="chat-screen">
+    <!-- 채팅 screen, chat.html -->
     <!-- Status bar -->
     <div class="status-bar">
       <div class="status-bar__column">
@@ -25,53 +26,27 @@
 
     <!-- header 생성 -->
     <header class="alt-header">
-        <div class="alt-header__column">
-            <i class="fas fa-angle-left fa-2x"></i>
-        </div>
-        <div class="alt-header__column">
-            <h1>Settings</h1>
-        </div>
-        <div class="alt-header__column">
-            <i class=""></i>
-        </div>
+      <div class="alt-header__column">
+        <a href="more.html">
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">minyoung</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-bars fa-lg"></i></span>
+      </div>
     </header>
-    
-    <main class="main-screen more-screen">
-    </main>
+
+    <main class="main-screen"></main>
 
     <!-- dark mode -->
     <div class="change-mode">
       <i class="fa-solid fa-share"></i>
       <a href="#" id="dark-mode-toggle">change mode</a>
     </div>
-
-    <!-- Nav bar icon 4개 -->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__btn">
-          <a class="nav__link" href="friends.html">
-            <i class="fa-regular fa-user fa-2x"></i>
-          </a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="chats.html">
-            <span class="nav__notification badge">1</span>
-            <i class="fa-regular fa-comment fa-2x"></i>
-          </a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="find.html">
-            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-          </a>
-        </li>
-        <li class="nav__btn">
-          <a class="nav__link" href="more.html">
-            <span class="nav__ellipsis"></span>
-            <i class="fa-solid fa-ellipsis fa-2x"></i>
-          </a>
-        </li>
-        <!-- ellipsis -->
-    </nav>
 
     <script
       src="https://kit.fontawesome.com/6b10c328de.js"
@@ -80,6 +55,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-<!--
-    #6.27 Settings Screen part One 2:45
--->
