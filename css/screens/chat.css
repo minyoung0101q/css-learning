@@ -23,4 +23,15 @@
 /* #6.29 5분 28초 */
 .main-chat {
   margin-top: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  font-size: 12px;
+  border-radius: 25px;
 }
