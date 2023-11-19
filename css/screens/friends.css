@@ -49,7 +49,7 @@
   align-items: center;
   font-size: 132px;
   animation: hideSplashScreen 2s ease-in-out forwards; /* forwards를 추가함으로써 마지막 속성인 opacity: 0 이 애니메이션이 끝나고도 유지된다, 그리고 아직 브라우저에 남아있기 때문에 클릭되지 않는 현상이 발생한다 */
-  /* animation-delay: 1s; -> 애니메이션으르 지연시킬 수 있음 */
+  /* animation-delay: 1s; /* 애니메이션으르 지연시킬 수 있음 */
 }
 
 /* 다크 모드 */
