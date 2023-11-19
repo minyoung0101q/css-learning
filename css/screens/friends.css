@@ -28,6 +28,18 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute; /* 가장 가까운 부모가 relative가 되는데 그걸 원치 않음 -> body가 부모이길 원함 */
+  height: 100vh; /* 화면 높이의 100%를 의미 */
+  width: 100vw; /* 화면 넓이의 100%를 의미 */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+}
+
 /* 다크 모드 */
 .dark-mode #friends-display-link i {
   color: rgba(255, 255, 255, 0.936);

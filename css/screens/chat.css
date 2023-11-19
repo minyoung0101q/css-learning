@@ -162,3 +162,8 @@
 .reply__column button:active {
   outline: none;
 }
+
+/* change-mode */
+.dark-mode .message__bubble {
+  color: black;
+}
