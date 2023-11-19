@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.alt-header__column {
+  width: 33%;
+}
+
 .alt-header__title {
   font-size: 20px;
   font-weight: 600;
@@ -17,8 +21,23 @@
   margin-right: auto;
 }
 
+/* 이건 일종의 치트키!
+absolute를 이용해서 정중앙에 오게 하는 건 CSS에서는 좀 이상하게 보임 -> 그래서 대신에 모든 열이 같은 너비를 가지게 함 
+각각 33%이다. 그리고 가운데 열은 중앙정렬 했다.
+마지막 열은 display를 flex로 하고 justify-content도 flex-end로 해서 이렇게 딱 중앙에 오게 만들었다.
+*/
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
 .alt-header__column:last-child {
   margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
 }
 
 /* dark-mode */

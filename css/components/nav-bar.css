@@ -20,7 +20,7 @@
 
 .nav__notification {
   position: absolute;
-  /* position: absolute는 가장 가까운 relative를 가진 부모를 기준으로 움직인다. */
+  /* position: absolut는 가장 가까운 relative를 가진 부모를 기준으로 움직인다. */
   left: 15px;
   bottom: 15px;
 }

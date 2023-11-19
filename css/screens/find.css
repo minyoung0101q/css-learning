@@ -102,6 +102,22 @@
   margin-left: 3px;
 }
 
+.header__link {
+  color: #2e363e;
+  position: relative;
+}
+
+.header__ellipsis {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  display: flex;
+  position: absolute; /* 가장 가까운 부모인 nav__link를 기준으로 움직인당 */
+  left: 1px;
+  bottom: 20px;
+}
+
 /* dark mode style */
 .dark-mode .main-screen,
 .dark-mode .recommended-friends__title,
