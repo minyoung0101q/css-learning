@@ -6,6 +6,6 @@
   --white: #ffffff;
   --main-border: 1px solid rgba(0, 0, 0, 0.2);
   --border-color: rgba(0, 0, 0, 0.5);
-  --other-color: rgba(0, 0, 0, 0.2);
+  --other-color: rgba(0, 0, 0, 0.5);
 }
 /* 같은 코드가 반복된다면 var을 사용하는 것이 좋다. */

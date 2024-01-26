@@ -11,9 +11,16 @@
 }
 
 .icon-row__icon i {
-  font-size: 35px;
+  font-size: 35px; /* icon의 size를 font-size로 설정 */
 }
 
 .icon-row__icon span {
   margin-top: 18px;
 }
+/* 
+.icon-row__icon 클래스는 부모인 .icon-row이 Flexbox container로 설정되어 있습니다. Flexbox container 내에서는 자식 요소에게 일부 CSS 속성이 적용됩니다.
+
+.icon-row__icon에 display: flex;가 설정되어 있고, 이것이 Flexbox container이기 때문에 그 자식인 <i>와 <span>에도 일부 Flexbox의 특성이 상속됩니다. Flexbox container 내에서는 Flex item들이 자동으로 블록 레벨처럼 취급되므로 margin-top과 같은 속성이 적용됩니다.
+
+따라서 .icon-row__icon span에 margin-top을 주어 간격을 설정할 수 있습니다. 이것은 Flexbox의 강력한 특성 중 하나로, 부모 Flex container의 설정이 자식 Flex items에게 상속되어 적용될 수 있다는 점입니다. 
+*/

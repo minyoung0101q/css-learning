@@ -3,18 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--horizontal-space);
-  /* margin-bottom: 15px; */
 }
 
 .screen__header__title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 30px; /* font-size는 px을 붙여줘야 함 */
+  font-weight: 600; /* px로 하면 작동 안됨 */
 }
 
 .screen__header__icons span {
-  margin-left: 20px;
+  margin: 0px 5px;
 }
 
+/* 설정 아이콘에 애니메이션 */
 @keyframes rotateCog {
   from {
     transform: none;
@@ -26,9 +26,4 @@
 
 .screen__header__icons .fa-gear:hover {
   animation: rotateCog 3s linear infinite;
-}
-
-/* screen-header dark mode */
-.dark-mode .screen__header {
-  color: var(--white);
 }

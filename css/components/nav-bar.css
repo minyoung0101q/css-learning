@@ -1,28 +1,29 @@
 .nav {
+  background-color: #f9f9fa;
   position: fixed;
   bottom: 0px;
   width: 100%;
-  background-color: #f9f9fa;
   padding: 20px 50px;
   box-sizing: border-box;
-  border-top: 1px solid rgba(87, 86, 86, 0.3);
 }
 
 .nav__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav__link {
-  color: #2e363e;
   position: relative;
 }
 
+/* animation */
 @keyframes notificationAnimation {
   0% {
     transform: none;
   }
   50% {
+    /* y축으로 -5px 이동하면서 360도 회전하는 효과 */
     transform: translateY(-5px) rotateY(360deg);
   }
   100% {
@@ -31,24 +32,16 @@
 }
 
 .nav__notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  /* position: absolut는 가장 가까운 relative를 가진 부모를 기준으로 움직인다. */
-  left: 15px;
+  left: 20px;
   bottom: 15px;
   animation: notificationAnimation 2s ease-in-out infinite;
 }
 
-.nav__ellipsis {
-  background-color: tomato;
-  width: 8px;
-  height: 8px;
-  border-radius: 5px;
-  display: flex;
-  position: absolute; /* 가장 가까운 부모인 nav__link를 기준으로 움직인당 */
-  left: 25px;
-  bottom: 30px;
-}
-
+/* appearBtnAnimation */
 @keyframes appearBtnAnimation {
   from {
     opacity: 0;
@@ -59,7 +52,6 @@
   }
 }
 
-/* nav__btn은 마지막 keyframes를 기억하지 않는다, 그래서 forwards를 추가해야 한다 */
 .nav__btn {
   transform: translateY(50px);
   opacity: 0;
@@ -67,13 +59,13 @@
 }
 
 .nav__btn:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 0.5s;
 }
 
 .nav__btn:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.9s;
 }
 
 .nav__btn:last-child {
-  animation-delay: 0.8s;
+  animation-delay: 1.3s;
 }

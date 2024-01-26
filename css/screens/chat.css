@@ -202,8 +202,3 @@
 .reply:focus-within {
   transform: translateY(80px);
 }
-
-/* change-mode */
-.dark-mode .message__bubble {
-  color: black;
-}

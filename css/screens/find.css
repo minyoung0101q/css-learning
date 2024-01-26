@@ -7,15 +7,15 @@
 
 .recommended-friends__title {
   font-size: 14px;
-  color: var(--border-color);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .recommended-friends span {
-  margin: 40px 0; /* span은 inline이니까 상하좌우 적용이 안되므로 display: block; 해야함 */
-  display: block; /* block 요소로 만든다 */
-  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  text-align: center; /* display: block;을 하고 text-align: center; 하기 */
   font-size: 18px;
-  color: var(--border-color);
+  margin: 40px 0px;
 }
 
 .open-chat__header {
@@ -29,11 +29,11 @@
   opacity: 0.6;
 }
 
+/* justify-content: space-between과 align-items: center는 같이 자주 쓰이는 조합 */
 .open-post {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* 위의 justify-content:space-between & align-items:center는 자주 같이 쓰이는 조합이다 */
 }
 
 .open-post__title {
@@ -68,15 +68,16 @@
   width: 2px;
   height: 15px;
   margin: 0 5px;
-  background-color: var(--other-color);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .open-post__member-status {
   color: #ffb0e0;
 }
 
+/* 부모에 relative */
 .open-post__photo {
-  position: relative; /* 부모에 relative */
+  position: relative;
 }
 
 .open-post__photo img {
@@ -118,8 +119,6 @@
 }
 
 .open-post__heart-count:hover i {
-  /* will-change 프로퍼티는 기본적으로 브라우저에게 뭔가가 바뀔거라고 말해줄 때, 애니메이션을 좀 더 낫게 만든다, 애니메이션이 훨씬 나아 보인다  */
-  /* will-change: transform; */
   animation: heartBeat 1s linear infinite;
 }
 
@@ -135,18 +134,6 @@
   border-radius: 5px;
   display: flex;
   position: absolute; /* 가장 가까운 부모인 nav__link를 기준으로 움직인당 */
-  left: 1px;
-  bottom: 20px;
-}
-
-/* dark mode style */
-.dark-mode .main-screen,
-.dark-mode .recommended-friends__title,
-.dark-mode .no-recommended-friends__title {
-  color: var(--white);
-}
-
-.dark-mode .recommended-friends {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  left: 15px;
+  bottom: 18px;
 }

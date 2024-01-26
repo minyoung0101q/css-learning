@@ -1,16 +1,17 @@
-#friends-display-link {
-  text-align: center;
+.friends-display-link {
   display: block;
+  text-align: center;
   background-color: #fafafa;
   margin-top: -30px;
   padding: 15px 0px;
   font-size: 16px;
 }
 
-#friends-display-link i {
+.friends-display-link i {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/* main */
 .friends-screen {
   padding: 0px var(--horizontal-space);
 }
@@ -18,13 +19,14 @@
 .friends-screen__channel {
   margin-top: 25px;
   border-top: var(--main-border);
-  padding-top: 15px; /* border에서 안쪽으로 간격을 주는 방법: padding */
+  padding-top: 15px; /* border에서 안쪽으로 간격을 주는 방법 */
 }
 
 .friends-screen__channel-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -40,41 +42,13 @@
 
 #splash-screen {
   background-color: var(--yellow);
-  position: absolute; /* 가장 가까운 부모가 relative가 되는데 그걸 원치 않음 -> body가 부모이길 원함 */
-  height: 100vh; /* 화면 높이의 100%를 의미 */
-  width: 100vw; /* 화면 넓이의 100%를 의미 */
-  top: 0;
+  position: absolute; /* 가장 가까운 relative 부모가 없어서 body가 부모 */
+  top: 0; /* body를 기준으로 딱 위로 붙인다 */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 132px;
-  animation: hideSplashScreen 2s ease-in-out forwards; /* forwards를 추가함으로써 마지막 속성인 opacity: 0 이 애니메이션이 끝나고도 유지된다, 그리고 아직 브라우저에 남아있기 때문에 클릭되지 않는 현상이 발생한다 */
-  /* animation-delay: 1s; /* 애니메이션으로 지연시킬 수 있음 */
+  animation: hideSplashScreen 2s ease-in-out forwards; /* 애니메이션에서 마지막에 정의한 스타일을 유지하라는 것을 나타낸다 -> forwards는! */
 }
-
-/* 다크 모드 */
-.dark-mode #friends-display-link i {
-  color: rgba(255, 255, 255, 0.936);
-}
-
-.dark-mode #friends-display-link {
-  background-color: #374151;
-  color: var(--white);
-}
-
-.dark-mode .friends-screen__channel-header,
-.dark-mode .friends-screen__channel {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-/* chats.html의 dark mode css 추가 */
-.dark-mode .user-component__subtitle {
-  color: var(--white);
-}
-
-/* 무엇인가를 숨기거나 html를 제거하고 싶을 때는 javascript를 써야 한다. css를 써서는 안된다.
-여기에서는 단지 브라우저가 이 element를 무시하도록 기술을 쓴 것이다.
-inspect를 해보면 splash-screen이 위에 있는 것을 볼 수 있다.
-지금은 visibility: hidden;으로 가려준 것 뿐.
-*/

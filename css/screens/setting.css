@@ -10,7 +10,7 @@
 .settings__setting i {
   opacity: 0.8;
   margin-right: 10px;
-  font-size: 22px; /* 아이콘의 크기를 지우자 */
+  font-size: 22px; /* 아이콘의 크기를 키우자 */
 }
 
 .settings__setting-column:nth-child(2) {
@@ -32,9 +32,4 @@
   color: white;
   font-weight: 600px;
   font-size: 10px;
-}
-
-/* dark-mode */
-.dark-mode .settings__setting {
-  border-bottom: 1px solid #ffffff;
 }

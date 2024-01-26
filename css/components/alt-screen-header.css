@@ -30,6 +30,11 @@ absolute를 이용해서 정중앙에 오게 하는 건 CSS에서는 좀 이상�
   text-align: center;
 }
 
+/* 
+margin-left: auto;는 왼쪽 마진을 최대한 늘란다
+margin-right: auto;는 오른쪽 마진을 최대한 늘린다
+기준은 가장 가까운 부모이다.
+*/
 .alt-header__column:last-child {
   margin-left: auto;
   display: flex;
@@ -38,9 +43,4 @@ absolute를 이용해서 정중앙에 오게 하는 건 CSS에서는 좀 이상�
 
 .alt-header__column span:last-child {
   margin-left: 20px;
-}
-
-/* dark-mode */
-.dark-mode .alt-header {
-  color: #ffffff;
 }

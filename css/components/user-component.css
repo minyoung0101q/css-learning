@@ -61,11 +61,8 @@
   display: block;
 }
 
-/* dark mode */
-.dark-mode .user-component__column div {
-  color: var(--white);
-}
-
-.dark-mode .user-component__time {
-  color: var(--white);
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
